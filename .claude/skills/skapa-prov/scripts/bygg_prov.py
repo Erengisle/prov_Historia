@@ -213,6 +213,47 @@ def poangtext(p):
     return f"  ({p} p)" if p else ""
 
 
+# ---------- Kriterier och centralt innehåll (numrerade, K1… och CI1…) ----------
+
+SKILLMAPP = Path(__file__).resolve().parent.parent
+
+
+def las_kriterier(prov):
+    """Läser kriterier-gy11.json / kriterier-gy25.json utifrån provets utgåva."""
+    utgava = (prov.get("utgava") or "").lower().replace("-", "")
+    fil = SKILLMAPP / f"kriterier-{utgava}.json"
+    return json.loads(fil.read_text(encoding="utf-8")) if utgava and fil.exists() else None
+
+
+def med_namn(koder, lista):
+    """'K2' -> 'K2 Samband …'. Text som inte är en känd kod skrivs som den är."""
+    return [f"{k} {lista[k]}" if lista and k in lista else k for k in koder]
+
+
+def oversikt(doc, prov, kr):
+    """Tabeller över vilka kriterier och vilken del av det centrala innehållet varje del av provet prövar."""
+    for rubriktext, nyckel in (("Betygskriterier som prövas", "kriterier"),
+                               ("Centralt innehåll som prövas", "centralt_innehall")):
+        lista = kr[nyckel]
+        delar = {k: [str(n) for n, d in enumerate(prov["delar"], 1) if k in d.get(nyckel, [])] for k in lista}
+        stycke(doc, f"{rubriktext} (kursplan {kr['kursplan']})", fet=True, fore=8, efter=2, hall_ihop=True)
+        tabell = doc.add_table(rows=1, cols=3)
+        tabell.style = "Table Grid"
+        for cell, text in zip(tabell.rows[0].cells, ("Nr", "Innehåll", "Prövas i del")):
+            cell.paragraphs[0].add_run(text).bold = True
+        for k, namn in lista.items():
+            rad = tabell.add_row().cells
+            rad[0].paragraphs[0].add_run(k).bold = True
+            rad[1].paragraphs[0].add_run(namn).font.size = Pt(10)
+            rad[2].paragraphs[0].add_run(", ".join(delar[k]) or "–").font.size = Pt(10)
+            if not delar[k]:
+                for c in rad:
+                    for r in c.paragraphs[0].runs:
+                        r.font.color.rgb = GRA
+        for rad in tabell.rows:
+            rad.cells[0].width, rad.cells[1].width, rad.cells[2].width = Cm(1.4), Cm(12.4), Cm(2.8)
+
+
 # ---------- Elevversion ----------
 
 def bygg_elev(prov, sokvag):
@@ -254,27 +295,36 @@ def bygg_facit(prov, sokvag):
     stycke(doc, info, storlek=10, efter=6, farg=GRA)
     stycke(doc, "Rättningsnyckel flerval (numrering som i Trelson-filen): " + rattningsnyckel(prov),
            storlek=10, efter=6)
+    kr = las_kriterier(prov)
+    if kr:
+        oversikt(doc, prov, kr)
+
+    def kodrader(d):
+        for etikett, nyckel in (("Betygskriterier", "kriterier"), ("Centralt innehåll", "centralt_innehall")):
+            if d.get(nyckel):
+                stycke(doc, f"{etikett}: " + "; ".join(med_namn(d[nyckel], kr and kr[nyckel])),
+                       storlek=10, efter=2, farg=GRA)
 
     for n, d in enumerate(prov["delar"], 1):
         typ = d["typ"]
         if typ == "flerval":
             antal = sum(f.get("poang", 1) for f in d["fragor"])
             rubrik(doc, f"{n}. {d.get('instruktion', 'Välj rätt alternativ.')}{poangtext(antal)}")
+            kodrader(d)
             for f in d["fragor"]:
                 flervalsfraga(doc, f, facit=True)
         elif typ == "begrepp":
             antal = sum(b.get("poang", 2) for b in d["begrepp"])
             rubrik(doc, f"{n}. {d.get('instruktion', 'Förklara kortfattat med egna ord.')}{poangtext(antal)}")
+            kodrader(d)
             for b in d["begrepp"]:
                 stycke(doc, b["term"] + poangtext(b.get("poang", 2)), fet=True, fore=6, hall_ihop=True)
                 stycke(doc, b.get("facit", ""), storlek=10.5)
         elif typ == "fritext":
             rubrik(doc, f"{n}. {d['fraga']}{poangtext(d.get('poang'))}")
-            for etikett, nyckel in (("Historiska begrepp", "historiska_begrepp"),
-                                    ("Betygskriterier som prövas", "kriterier"),
-                                    ("Centralt innehåll", "centralt_innehall")):
-                if d.get(nyckel):
-                    stycke(doc, f"{etikett}: " + ", ".join(d[nyckel]), storlek=10.5, efter=2, farg=GRA)
+            if d.get("historiska_begrepp"):
+                stycke(doc, "Historiska begrepp: " + ", ".join(d["historiska_begrepp"]), storlek=10, efter=2, farg=GRA)
+            kodrader(d)
             if d.get("fordjupning"):
                 stycke(doc, f"Bygger på fördjupningen {d['fordjupning']}. Frågan ger själv den bakgrund som behövs.",
                        storlek=10.5, efter=2, farg=GRA)

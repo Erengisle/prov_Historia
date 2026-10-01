@@ -14,7 +14,8 @@ Skillen gör ett prov i tre steg: **läs kapitlet → skriv provet som `prov.jso
 |---|---|
 | `kapitel/` | Bokens kapitel, inskannade (PDF). Filnamnet anger utgåvan: `… Gy-11.pdf` eller `… Gy-25.pdf`. |
 | `exempelprov/` | Lärarens tidigare prov. Visar stil, språknivå och upplägg. |
-| `.claude/skills/skapa-prov/kursplan-gy11.md`, `kursplan-gy25.md` | Centralt innehåll och betygskriterier (E/C/A) för Gy-11 respektive Gy-25 (Historia nivå 1b). |
+| `.claude/skills/skapa-prov/kursplan-gy11.md`, `kursplan-gy25.md` | Centralt innehåll (CI1, CI2 …) och betygskriterier (K1, K2 …, varje mening märkt) för Gy-11 respektive Gy-25 (Historia nivå 1b). |
+| `.claude/skills/skapa-prov/kriterier-gy11.json`, `kriterier-gy25.json` | Samma nummer med korta namn – scriptet använder dem i facit. |
 | `prov/<namn>/` | Här hamnar nya prov: `prov.json`, `*_elev.docx`, `*_facit.docx`, `*_trelson.docx/.txt`. |
 
 ## Arbetsgång
@@ -75,10 +76,11 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 - Minst en fråga i del 4 ska kunna nå A-nivå: den ska öppna för jämförelser, flera samband, olika tolkningar eller en koppling till nutiden.
 - Ange för varje fritextfråga:
   - `historiska_begrepp` – listan som står i frågan
-  - `kriterier` – vilka av områdena ovan frågan prövar (korta etiketter)
-  - `centralt_innehall` – vilken eller vilka punkter i det centrala innehållet frågan hör till (kort, t.ex. "Industrialisering och demokratisering")
+  - `kriterier` – vilka betygskriterier frågan prövar, som nummer: `["K1", "K3"]` (se `kriterier-<utgåva>.json`)
+  - `centralt_innehall` – vilka punkter i det centrala innehållet frågan hör till, som nummer: `["CI2", "CI6"]`
   - `innehall` – vad ett bra svar bör ta upp, punktlista med fakta från kapitlet
   - `bedomning` med nivåerna **E, C, A**, formulerad med kriteriernas progressionsord (se tabellen sist i kursplanfilen): *översiktligt → utförligt → utförligt och nyanserat*, *enkla → välgrundade → välgrundade och nyanserade slutsatser*, *med viss säkerhet → med säkerhet*, *enkla → komplexa exempel* osv. Gör texten konkret för just frågan: skriv vilka orsaker, samband eller jämförelser som krävs på respektive nivå.
+- Ange `kriterier` och `centralt_innehall` (nummer) även för flervals- och begreppsdelen – oftast K1 och de CI som kapitlet tar upp.
 - Begreppsfrågor och flerval prövar främst E-nivå (redogöra översiktligt, använda begrepp). Det är fritextfrågorna som skiljer mellan E, C och A.
 
 **Språk**: Svenska. Lägg frågorna på samma språknivå som läroboken i `kapitel/` (exempelproven kommer från en bok för åk 7–9, medan kapitlen kan vara från en gymnasiebok). Korta, tydliga meningar och inga onödigt svåra ord. Bedömningsstödet i facit får använda kriteriernas språk.
@@ -100,8 +102,8 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
     {"typ": "begrepp", "instruktion": "Förklara kortfattat med egna ord.", "rader": 3,
      "begrepp": [{"term": "…", "facit": "…", "poang": 2}]},
     {"typ": "fritext", "fraga": "…", "rader": 8, "poang": 4,
-     "historiska_begrepp": [], "kriterier": ["orsaker och konsekvenser"],
-     "centralt_innehall": ["…"], "fordjupning": "Historiebruk: Paris (frivilligt fält)", "innehall": ["…"],
+     "historiska_begrepp": [], "kriterier": ["K1", "K3"],
+     "centralt_innehall": ["CI2"], "fordjupning": "Historiebruk: Paris (frivilligt fält)", "innehall": ["…"],
      "bedomning": {"E": "…", "C": "…", "A": "…"}}
   ]
 }
@@ -118,7 +120,7 @@ python3 .claude/skills/skapa-prov/scripts/bygg_prov.py prov/<namn>/prov.json --p
 ```
 Scriptet kontrollerar JSON-filen (antal flervalsfrågor, 3 alternativ, giltigt `ratt`, fördelning av rätta svar) och skriver i samma mapp:
 - `<namn>_elev.docx` – pappersprovet
-- `<namn>_facit.docx` – facit, bedömningsstöd och rättningsnyckel för flervalsfrågorna
+- `<namn>_facit.docx` – facit, bedömningsstöd, rättningsnyckel för flervalsfrågorna och en översikt över vilka kriterier (K) och vilket centralt innehåll (CI) varje del prövar
 - `<namn>_trelson.docx` och `.txt` – provet som en lista av enskilda frågor med löpande nummer (Fråga 1, 2, …), utan kryssrutor och skrivrader, för att kopiera in i Trelson. Flervalsalternativen har bokstäverna A–C. Begreppen blir en fråga var.
 - PDF med `--pdf` (kräver LibreOffice).
 

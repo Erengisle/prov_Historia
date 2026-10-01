@@ -1,0 +1,21 @@
+{
+  "kursplan": "Gy-11",
+  "kriterier": {
+    "K1": "Förändringsprocesser, händelser och personer samt olika tolkningar av dem",
+    "K2": "Förlopp, orsaker och konsekvenser",
+    "K3": "Enskilda personers betydelse för skeenden",
+    "K4": "Samband mellan det förflutna och nutiden",
+    "K5": "Slutsatser om betydelse för framtiden",
+    "K6": "Historiska begrepp",
+    "K7": "Källmaterial och källkritik",
+    "K8": "Historiebruk"
+  },
+  "centralt_innehall": {
+    "CI1": "Europeisk epokindelning och problematisering av tidsindelningar",
+    "CI2": "Industrialisering, demokratisering och globala förändringsprocesser; förändrade maktförhållanden och förklaringar till dem",
+    "CI3": "Långsiktiga förändringsprocesser – kontinuitet och förändring",
+    "CI4": "Källmaterial om människors roll; olika perspektiv",
+    "CI5": "Kritisk granskning av källmaterial",
+    "CI6": "Historiebruk och identitet"
+  }
+}

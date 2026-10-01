@@ -8,6 +8,13 @@
     {
       "typ": "flerval",
       "instruktion": "Välj rätt alternativ.",
+      "kriterier": [
+        "K1",
+        "K2"
+      ],
+      "centralt_innehall": [
+        "CI2"
+      ],
       "fragor": [
         {
           "fraga": "Vad innebar det att de europeiska staterna omkring 1789 var privilegiesamhällen?",
@@ -150,6 +157,13 @@
       "typ": "begrepp",
       "instruktion": "Förklara kortfattat med egna ord.",
       "rader": 3,
+      "kriterier": [
+        "K1"
+      ],
+      "centralt_innehall": [
+        "CI2",
+        "CI3"
+      ],
       "begrepp": [
         {
           "term": "L’ancien régime",
@@ -185,12 +199,11 @@
       "poang": 4,
       "historiska_begrepp": [],
       "kriterier": [
-        "historiebruk",
-        "samband dåtid–nutid"
+        "K4",
+        "K8"
       ],
       "centralt_innehall": [
-        "Hur individer och grupper använt historia i samhällsliv och politik",
-        "Historiens betydelse för identiteter och gemensamma kulturarv"
+        "CI6"
       ],
       "fordjupning": "Historiebruk: Paris",
       "innehall": [
@@ -217,15 +230,14 @@
         "förändring"
       ],
       "kriterier": [
-        "förändringsprocesser och händelser",
-        "orsaker och konsekvenser",
-        "samband dåtid–nutid",
-        "historiska begrepp"
+        "K1",
+        "K2",
+        "K4",
+        "K6"
       ],
       "centralt_innehall": [
-        "Demokratisering under 1800- och 1900-talen",
-        "Långsiktiga förändringsprocesser – kontinuitet och förändring",
-        "Förändrade maktförhållanden"
+        "CI2",
+        "CI3"
       ],
       "innehall": [
         "Orsaker: statens budgetunderskott, orättvist skattesystem där adel och präster inte betalade skatt, höga matpriser och missväxt, kostnaden för det amerikanska frihetskriget, upplysningens idéer, tredje ståndets brist på inflytande.",
@@ -252,14 +264,14 @@
         "struktur"
       ],
       "kriterier": [
-        "olika tolkningar",
-        "personers betydelse",
-        "orsaker och konsekvenser",
-        "historiska begrepp"
+        "K1",
+        "K2",
+        "K3",
+        "K6"
       ],
       "centralt_innehall": [
-        "Förändrade maktförhållanden och olika historiska förklaringar till dem",
-        "Statsbildning – långsiktiga förändringsprocesser"
+        "CI2",
+        "CI3"
       ],
       "fordjupning": "Debatt: Aktör eller struktur? Fallet Tysklands enande",
       "innehall": [

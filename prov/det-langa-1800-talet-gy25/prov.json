@@ -8,6 +8,13 @@
     {
       "typ": "flerval",
       "instruktion": "Välj rätt alternativ.",
+      "kriterier": [
+        "K1"
+      ],
+      "centralt_innehall": [
+        "CI2",
+        "CI3"
+      ],
       "fragor": [
         {
           "fraga": "Vad innebar det att de europeiska staterna omkring 1789 var privilegiesamhällen?",
@@ -150,6 +157,13 @@
       "typ": "begrepp",
       "instruktion": "Förklara kortfattat med egna ord.",
       "rader": 3,
+      "kriterier": [
+        "K1"
+      ],
+      "centralt_innehall": [
+        "CI2",
+        "CI3"
+      ],
       "begrepp": [
         {
           "term": "L’ancien régime",
@@ -185,12 +199,12 @@
       "poang": 4,
       "historiska_begrepp": [],
       "kriterier": [
-        "historiebruk",
-        "samband dåtid–nutid"
+        "K2",
+        "K5"
       ],
       "centralt_innehall": [
-        "Historiebruk – hur historia används i vardagsliv, samhällsliv och politik och påverkar identitet och värderingar",
-        "Samband mellan det förflutna och nutida förhållanden"
+        "CI8",
+        "CI5"
       ],
       "fordjupning": "Historiebruk: Paris",
       "innehall": [
@@ -217,13 +231,14 @@
         "förändring"
       ],
       "kriterier": [
-        "förändringsprocesser och händelser",
-        "resonemang med historiska begrepp",
-        "samband dåtid–nutid"
+        "K1",
+        "K2",
+        "K3"
       ],
       "centralt_innehall": [
-        "Framgångar och motgångar för demokratisering från upplysningstiden till nutid",
-        "Begreppen orsak och konsekvens, kontinuitet och förändring"
+        "CI2",
+        "CI5",
+        "CI6"
       ],
       "innehall": [
         "Orsaker: statens budgetunderskott, orättvist skattesystem där adel och präster inte betalade skatt, höga matpriser och missväxt, kostnaden för det amerikanska frihetskriget, upplysningens idéer, tredje ståndets brist på inflytande.",
@@ -250,14 +265,12 @@
         "struktur"
       ],
       "kriterier": [
-        "aktörer",
-        "olika tolkningar och perspektiv",
-        "resonemang med historiska begrepp och teorier",
-        "orsaker och konsekvenser"
+        "K1",
+        "K3"
       ],
       "centralt_innehall": [
-        "Begreppen aktör och struktur samt orsak och konsekvens",
-        "Konflikter och långa historiska linjer med fokus på makt"
+        "CI3",
+        "CI6"
       ],
       "fordjupning": "Debatt: Aktör eller struktur? Fallet Tysklands enande",
       "innehall": [
