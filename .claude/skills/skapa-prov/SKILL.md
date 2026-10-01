@@ -74,7 +74,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
   - `bedomning` med nivåerna **E, C, A**, formulerad med kriteriernas progressionsord (se tabellen sist i `kursplan.md`): *översiktligt → utförligt → utförligt och nyanserat*, *enkla → välgrundade → välgrundade och nyanserade slutsatser*, *med viss säkerhet → med säkerhet*, *enkla → komplexa exempel* osv. Gör texten konkret för just frågan: skriv vilka orsaker, samband eller jämförelser som krävs på respektive nivå.
 - Begreppsfrågor och flerval prövar främst E-nivå (redogöra översiktligt, använda begrepp). Det är fritextfrågorna som skiljer mellan E, C och A.
 
-**Språk**: Svenska. Läroboken är skriven för åk 7–9 – håll frågorna på samma språknivå: korta meningar, inga onödigt svåra ord. Bedömningsstödet i facit får använda kriteriernas språk.
+**Språk**: Svenska. Lägg frågorna på samma språknivå som läroboken i `kapitel/` (exempelproven kommer från en bok för åk 7–9, medan kapitlen kan vara från en gymnasiebok). Korta, tydliga meningar och inga onödigt svåra ord. Bedömningsstödet i facit får använda kriteriernas språk.
 
 ### 4. Skriv `prov/<namn>/prov.json`
 
