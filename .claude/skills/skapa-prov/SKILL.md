@@ -14,6 +14,7 @@ Skillen gör ett prov i tre steg: **läs kapitlet → skriv provet som `prov.jso
 |---|---|
 | `kapitel/` | Bokens kapitel, inskannade (PDF). |
 | `exempelprov/` | Lärarens tidigare prov. Visar stil, språknivå och upplägg. |
+| `.claude/skills/skapa-prov/kursplan.md` | Kursens centrala innehåll och betygskriterier (E/C/A). |
 | `prov/<namn>/` | Här hamnar nya prov: `prov.json`, `*_elev.docx/pdf`, `*_facit.docx/pdf`. |
 
 ## Arbetsgång
@@ -56,13 +57,24 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 **Fritextfrågor (resonemang)**
 - Del 3: en fråga som kräver en förklaring eller ett perspektiv, t.ex. *"…Vilket perspektiv, och varför tror du att det är så?"*
 - Del 4: en öppen fråga som kräver resonemang och där eleven ska använda historiska begrepp: **orsak och konsekvens, kontinuitet och förändring, villkor och värderingar** (och vid behov *förklaring*, *jämförelse*). Skriv ut i frågan vilka begrepp som ska användas, som i exempelproven.
-- Ange `historiska_begrepp` (listan som står i frågan), `innehall` (vad ett bra svar bör ta upp, punktlista med fakta från kapitlet) och `bedomning` med nivåerna **E, C, A**:
-  - E: enkla resonemang, några relevanta fakta, begreppen används på ett enkelt sätt.
-  - C: utvecklade resonemang, kopplar orsaker/följder, begreppen används relativt säkert.
-  - A: välutvecklade och nyanserade resonemang, flera samband, jämförelser, begreppen används säkert.
-  Gör kriterierna konkreta för just frågan (vilka orsaker, vilka samband).
+- Fritextfrågorna ska ge eleven möjlighet att visa kunskaper enligt **betygskriterierna i `kursplan.md`** (läs filen). Låt frågorna tillsammans täcka flera av kriteriernas områden, i mån av vad kapitlet ger stöd för:
+  - förändringsprocesser, händelser och personer – förlopp, orsaker och konsekvenser
+  - personers betydelse för skeenden
+  - olika tolkningar (jämföra, förorda en, motivera)
+  - samband mellan det förflutna och nutiden, och slutsatser om framtiden
+  - historiska begrepp
+  - källmaterial (om kapitlet innehåller källor, bilder eller citat)
+  - historiebruk (hur historien har använts)
+- Minst en fråga i del 4 ska kunna nå A-nivå: den ska öppna för jämförelser, flera samband, olika tolkningar eller en koppling till nutiden.
+- Ange för varje fritextfråga:
+  - `historiska_begrepp` – listan som står i frågan
+  - `kriterier` – vilka av områdena ovan frågan prövar (korta etiketter)
+  - `centralt_innehall` – vilken eller vilka punkter i det centrala innehållet frågan hör till (kort, t.ex. "Industrialisering och demokratisering")
+  - `innehall` – vad ett bra svar bör ta upp, punktlista med fakta från kapitlet
+  - `bedomning` med nivåerna **E, C, A**, formulerad med kriteriernas progressionsord (se tabellen sist i `kursplan.md`): *översiktligt → utförligt → utförligt och nyanserat*, *enkla → välgrundade → välgrundade och nyanserade slutsatser*, *med viss säkerhet → med säkerhet*, *enkla → komplexa exempel* osv. Gör texten konkret för just frågan: skriv vilka orsaker, samband eller jämförelser som krävs på respektive nivå.
+- Begreppsfrågor och flerval prövar främst E-nivå (redogöra översiktligt, använda begrepp). Det är fritextfrågorna som skiljer mellan E, C och A.
 
-**Språk**: Svenska, anpassat för åk 7–9. Korta meningar, inga onödigt svåra ord i frågorna.
+**Språk**: Svenska. Läroboken är skriven för åk 7–9 – håll frågorna på samma språknivå: korta meningar, inga onödigt svåra ord. Bedömningsstödet i facit får använda kriteriernas språk.
 
 ### 4. Skriv `prov/<namn>/prov.json`
 
@@ -79,7 +91,8 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
     {"typ": "begrepp", "instruktion": "Förklara kortfattat med egna ord.", "rader": 3,
      "begrepp": [{"term": "…", "facit": "…", "poang": 2}]},
     {"typ": "fritext", "fraga": "…", "rader": 8, "poang": 4,
-     "historiska_begrepp": [], "innehall": ["…"],
+     "historiska_begrepp": [], "kriterier": ["orsaker och konsekvenser"],
+     "centralt_innehall": ["…"], "innehall": ["…"],
      "bedomning": {"E": "…", "C": "…", "A": "…"}}
   ]
 }

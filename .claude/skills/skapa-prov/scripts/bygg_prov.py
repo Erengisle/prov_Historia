@@ -67,6 +67,8 @@ def kontrollera(prov):
                 fel.append(f"Del {n}: fritextfråga saknar 'fraga'.")
             if not d.get("bedomning"):
                 varningar.append(f"Del {n}: fritextfråga saknar 'bedomning' (E/C/A).")
+            if not d.get("kriterier"):
+                varningar.append(f"Del {n}: fritextfråga saknar 'kriterier' (vilka betygskriterier den prövar).")
         elif typ != "flerval":
             fel.append(f"Del {n}: okänd typ {typ!r} (flerval, begrepp, fritext).")
     return fel, varningar
@@ -263,9 +265,11 @@ def bygg_facit(prov, sokvag):
                 stycke(doc, b.get("facit", ""), storlek=10.5)
         elif typ == "fritext":
             rubrik(doc, f"{n}. {d['fraga']}{poangtext(d.get('poang'))}")
-            if d.get("historiska_begrepp"):
-                stycke(doc, "Historiska begrepp: " + ", ".join(d["historiska_begrepp"]),
-                       storlek=10.5, efter=4, farg=GRA)
+            for etikett, nyckel in (("Historiska begrepp", "historiska_begrepp"),
+                                    ("Betygskriterier som prövas", "kriterier"),
+                                    ("Centralt innehåll", "centralt_innehall")):
+                if d.get(nyckel):
+                    stycke(doc, f"{etikett}: " + ", ".join(d[nyckel]), storlek=10.5, efter=2, farg=GRA)
             if d.get("innehall"):
                 stycke(doc, "Ett bra svar tar upp:", fet=True, hall_ihop=True)
                 for punkt in d["innehall"]:
