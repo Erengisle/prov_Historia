@@ -1,6 +1,6 @@
-# Kursplan: centralt innehåll och betygskriterier
+# Kursplan Gy-11: centralt innehåll och betygskriterier
 
-Lärarens text, ordagrant. Används när frågor väljs och när bedömningsstöd skrivs.
+Lärarens text, ordagrant. Formuleringarna ("kursen", epokindelningen, betygskriterier för E–A) motsvarar Gy-11-kursen; för Gy-25 behövs en egen fil, `kursplan-gy25.md`. Används när frågor väljs och när bedömningsstöd skrivs.
 
 ## Centralt innehåll
 

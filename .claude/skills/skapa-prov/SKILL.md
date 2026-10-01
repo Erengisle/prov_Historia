@@ -12,15 +12,17 @@ Skillen gör ett prov i tre steg: **läs kapitlet → skriv provet som `prov.jso
 
 | Mapp | Innehåll |
 |---|---|
-| `kapitel/` | Bokens kapitel, inskannade (PDF). |
+| `kapitel/` | Bokens kapitel, inskannade (PDF). Filnamnet anger utgåvan: `… Gy-11.pdf` eller `… Gy-25.pdf`. |
 | `exempelprov/` | Lärarens tidigare prov. Visar stil, språknivå och upplägg. |
-| `.claude/skills/skapa-prov/kursplan.md` | Kursens centrala innehåll och betygskriterier (E/C/A). |
-| `prov/<namn>/` | Här hamnar nya prov: `prov.json`, `*_elev.docx/pdf`, `*_facit.docx/pdf`. |
+| `.claude/skills/skapa-prov/kursplan-gy11.md` | Centralt innehåll och betygskriterier (E/C/A), Gy-11. Motsvarande fil för Gy-25 heter `kursplan-gy25.md` när den finns. |
+| `prov/<namn>/` | Här hamnar nya prov: `prov.json`, `*_elev.docx`, `*_facit.docx`, `*_trelson.docx/.txt`. |
 
 ## Arbetsgång
 
 ### 1. Ta reda på underlaget
 - Vilket kapitel/område? Hitta PDF:en i `kapitel/`. Finns den inte: fråga läraren, gissa inte innehållet.
+- **Utgåva:** Läraren har boken i två utgåvor, Gy-11 och Gy-25. Finns kapitlet i båda och läraren inte sagt vilken: fråga. Använd kursplanen för samma utgåva (`kursplan-gy11.md` / `kursplan-gy25.md`). Saknas kursplanen för utgåvan: säg det till läraren och använd den som finns, och skriv det i överlämningen.
+- Uppladdade filer hamnar ofta på `main`. Hämta in dem till arbetsgrenen (`git fetch` + merge) om de inte finns lokalt.
 - Inskannade PDF:er saknar oftast textlager. Läs dem med Read-verktyget och `pages` (max 20 sidor per anrop) så att sidorna tolkas som bilder.
 - Läs **hela** kapitlet. Anteckna: centrala begrepp, händelser med årtal, personer, orsaker och följder, samt vad kapitlet själv lyfter fram (rubriker, faktarutor, sammanfattningar, instuderingsfrågor).
 - Titta på minst ett prov i `exempelprov/` för ton och svårighetsgrad om du inte redan gjort det i samtalet.
@@ -57,7 +59,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 **Fritextfrågor (resonemang)**
 - Del 3: en fråga som kräver en förklaring eller ett perspektiv, t.ex. *"…Vilket perspektiv, och varför tror du att det är så?"*
 - Del 4: en öppen fråga som kräver resonemang och där eleven ska använda historiska begrepp: **orsak och konsekvens, kontinuitet och förändring, villkor och värderingar** (och vid behov *förklaring*, *jämförelse*). Skriv ut i frågan vilka begrepp som ska användas, som i exempelproven.
-- Fritextfrågorna ska ge eleven möjlighet att visa kunskaper enligt **betygskriterierna i `kursplan.md`** (läs filen). Låt frågorna tillsammans täcka flera av kriteriernas områden, i mån av vad kapitlet ger stöd för:
+- Fritextfrågorna ska ge eleven möjlighet att visa kunskaper enligt **betygskriterierna i kursplanen för rätt utgåva** (läs filen). Låt frågorna tillsammans täcka flera av kriteriernas områden, i mån av vad kapitlet ger stöd för:
   - förändringsprocesser, händelser och personer – förlopp, orsaker och konsekvenser
   - personers betydelse för skeenden
   - olika tolkningar (jämföra, förorda en, motivera)
@@ -71,19 +73,20 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
   - `kriterier` – vilka av områdena ovan frågan prövar (korta etiketter)
   - `centralt_innehall` – vilken eller vilka punkter i det centrala innehållet frågan hör till (kort, t.ex. "Industrialisering och demokratisering")
   - `innehall` – vad ett bra svar bör ta upp, punktlista med fakta från kapitlet
-  - `bedomning` med nivåerna **E, C, A**, formulerad med kriteriernas progressionsord (se tabellen sist i `kursplan.md`): *översiktligt → utförligt → utförligt och nyanserat*, *enkla → välgrundade → välgrundade och nyanserade slutsatser*, *med viss säkerhet → med säkerhet*, *enkla → komplexa exempel* osv. Gör texten konkret för just frågan: skriv vilka orsaker, samband eller jämförelser som krävs på respektive nivå.
+  - `bedomning` med nivåerna **E, C, A**, formulerad med kriteriernas progressionsord (se tabellen sist i kursplanfilen): *översiktligt → utförligt → utförligt och nyanserat*, *enkla → välgrundade → välgrundade och nyanserade slutsatser*, *med viss säkerhet → med säkerhet*, *enkla → komplexa exempel* osv. Gör texten konkret för just frågan: skriv vilka orsaker, samband eller jämförelser som krävs på respektive nivå.
 - Begreppsfrågor och flerval prövar främst E-nivå (redogöra översiktligt, använda begrepp). Det är fritextfrågorna som skiljer mellan E, C och A.
 
 **Språk**: Svenska. Lägg frågorna på samma språknivå som läroboken i `kapitel/` (exempelproven kommer från en bok för åk 7–9, medan kapitlen kan vara från en gymnasiebok). Korta, tydliga meningar och inga onödigt svåra ord. Bedömningsstödet i facit får använda kriteriernas språk.
 
 ### 4. Skriv `prov/<namn>/prov.json`
 
-`<namn>` t.ex. `kapitel-23`. Format (fullständigt exempel: `exempel-prov.json` i den här skillens mapp):
+`<namn>` t.ex. `det-langa-1800-talet-gy25` – ta med utgåvan i namnet. Format (fullständigt exempel: `exempel-prov.json` i den här skillens mapp):
 
 ```json
 {
   "titel": "Kapiteltest 23",
   "rubrik_hoger": "Kapitel 23",
+  "utgava": "Gy-25",
   "kalla": "Fundament Historia 7–9, kapitel 23",
   "delar": [
     {"typ": "flerval", "instruktion": "Välj rätt alternativ.",
@@ -107,9 +110,15 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 pip install python-docx   # om det saknas
 python3 .claude/skills/skapa-prov/scripts/bygg_prov.py prov/<namn>/prov.json --pdf
 ```
-Scriptet kontrollerar JSON-filen (antal flervalsfrågor, 3 alternativ, giltigt `ratt`, fördelning av rätta svar) och skriver `<namn>_elev.docx` och `<namn>_facit.docx` (+ PDF med `--pdf`) i samma mapp. Åtgärda alla fel och varningar och bygg om.
+Scriptet kontrollerar JSON-filen (antal flervalsfrågor, 3 alternativ, giltigt `ratt`, fördelning av rätta svar) och skriver i samma mapp:
+- `<namn>_elev.docx` – pappersprovet
+- `<namn>_facit.docx` – facit, bedömningsstöd och rättningsnyckel för flervalsfrågorna
+- `<namn>_trelson.docx` och `.txt` – provet som en lista av enskilda frågor med löpande nummer (Fråga 1, 2, …), utan kryssrutor och skrivrader, för att kopiera in i Trelson. Flervalsalternativen har bokstäverna A–C. Begreppen blir en fråga var.
+- PDF med `--pdf` (kräver LibreOffice).
+
+Den löpande numreringen är densamma i Trelson-filen, i rättningsnyckeln och vid rättning av elevsvar. Åtgärda alla fel och varningar och bygg om.
 
 Granska sedan elev-PDF:en (Read-verktyget) innan du lämnar över: sidbrytningar, att inga rätta svar syns, att svarsraderna räcker. Om LibreOffice inte kan göra PDF (scriptet varnar), läs i stället texten ur Word-filerna med python-docx och kontrollera ordning och innehåll; läraren sparar PDF från Word.
 
 ### 6. Lämna över till läraren
-Berätta kort: kapitel, antal frågor per del, totalpoäng, var filerna ligger, och om något i kapitlet var svårläst i skanningen.
+Berätta kort: kapitel och utgåva, vilken kursplan som använts, antal frågor per del, totalpoäng, var filerna ligger, och om något i kapitlet var svårläst i skanningen.

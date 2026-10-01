@@ -2,7 +2,7 @@
 """Bygger elevprov och facit (Word, ev. PDF) från en prov.json.
 
 Användning:
-    python3 bygg_prov.py prov/kapitel-23/prov.json [--pdf] [--ut MAPP]
+    python3 bygg_prov.py prov/det-langa-1800-talet-gy25/prov.json [--pdf] [--ut MAPP]
 """
 import argparse
 import json
@@ -24,6 +24,7 @@ except ImportError:
 MIN_FLERVAL, MAX_FLERVAL = 12, 15
 ANTAL_ALTERNATIV = 3
 RUTA, KRYSS = "☐", "☒"  # ☐ ☒
+BOKSTAVER = "ABCDEFGH"
 GRA = RGBColor(0x55, 0x55, 0x55)
 
 
@@ -249,6 +250,8 @@ def bygg_facit(prov, sokvag):
     if prov.get("kalla"):
         info = f"Underlag: {prov['kalla']}. " + info
     stycke(doc, info, storlek=10, efter=6, farg=GRA)
+    stycke(doc, "Rättningsnyckel flerval (numrering som i Trelson-filen): " + rattningsnyckel(prov),
+           storlek=10, efter=6)
 
     for n, d in enumerate(prov["delar"], 1):
         typ = d["typ"]
@@ -286,6 +289,56 @@ def bygg_facit(prov, sokvag):
                         rad[0].paragraphs[0].add_run(niva).bold = True
                         rad[1].paragraphs[0].add_run(d["bedomning"][niva]).font.size = Pt(10.5)
     doc.save(sokvag)
+
+
+
+# ---------- Trelson (en fråga i taget, för att kopiera in i provverktyget) ----------
+
+def trelsonfragor(prov):
+    """Provet som en platt lista av enskilda frågor med löpande nummer.
+    Numreringen används i Trelson-filen, i rättningsnyckeln och vid rättning."""
+    nr = 0
+    for d in prov["delar"]:
+        if d["typ"] == "flerval":
+            for f in d["fragor"]:
+                nr += 1
+                yield {"nr": nr, "typ": "Flerval", "poang": f.get("poang", 1), "text": f["fraga"],
+                       "alternativ": f["alternativ"], "ratt": f["ratt"]}
+        elif d["typ"] == "begrepp":
+            instruktion = d.get("instruktion", "Förklara kortfattat med egna ord.").rstrip(".:")
+            for b in d["begrepp"]:
+                nr += 1
+                yield {"nr": nr, "typ": "Kort svar", "poang": b.get("poang", 2),
+                       "text": f"{instruktion}: {b['term']}"}
+        else:
+            nr += 1
+            yield {"nr": nr, "typ": "Längre svar" if d.get("rader", 8) >= 15 else "Svar med några meningar",
+                   "poang": d.get("poang", 0), "text": d["fraga"]}
+
+
+def bygg_trelson(prov, docx_sokvag, txt_sokvag):
+    rader = [prov["titel"], ""]
+    doc = Document()
+    doc.styles["Normal"].font.name = "Calibri"
+    doc.styles["Normal"].font.size = Pt(11)
+    doc.add_paragraph().add_run(prov["titel"]).bold = True
+    stycke(doc, "En fråga per block. Kopiera frågetexten och alternativen var för sig in i Trelson.",
+           storlek=9.5, efter=8, farg=GRA)
+    for f in trelsonfragor(prov):
+        huvud = f"Fråga {f['nr']} – {f['typ']} ({f['poang']} p)"
+        rader += [huvud, f["text"]]
+        stycke(doc, huvud, fet=True, storlek=10, fore=10, farg=GRA, hall_ihop=True)
+        stycke(doc, f["text"], hall_ihop="alternativ" in f)
+        for j, alt in enumerate(f.get("alternativ", [])):
+            rader.append(f"{BOKSTAVER[j]}. {alt}")
+            stycke(doc, f"{BOKSTAVER[j]}. {alt}", hall_ihop=j < len(f["alternativ"]) - 1)
+        rader.append("")
+    doc.save(docx_sokvag)
+    txt_sokvag.write_text("\n".join(rader), encoding="utf-8")
+
+
+def rattningsnyckel(prov):
+    return "   ".join(f"{f['nr']} {BOKSTAVER[f['ratt']]}" for f in trelsonfragor(prov) if "alternativ" in f)
 
 
 # ---------- Huvudprogram ----------
@@ -326,6 +379,7 @@ def main():
     elev, facit = mapp / f"{namn}_elev.docx", mapp / f"{namn}_facit.docx"
     bygg_elev(prov, elev)
     bygg_facit(prov, facit)
+    bygg_trelson(prov, mapp / f"{namn}_trelson.docx", mapp / f"{namn}_trelson.txt")
     if args.pdf:
         till_pdf(elev, mapp)
         till_pdf(facit, mapp)

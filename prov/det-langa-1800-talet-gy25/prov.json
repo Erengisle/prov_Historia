@@ -1,0 +1,276 @@
+{
+  "titel": "Prov: Det långa 1800-talet",
+  "rubrik_hoger": "Det långa 1800-talet",
+  "utgava": "Gy-25",
+  "kalla": "Lärobokens kapitel Det långa 1800-talet – mellan tradition och förnyelse, utgåvan för Gy-25 (s. 84–113)",
+  "delar": [
+    {
+      "typ": "flerval",
+      "instruktion": "Välj rätt alternativ.",
+      "fragor": [
+        {
+          "fraga": "Vad innebar det att de europeiska staterna omkring 1789 var privilegiesamhällen?",
+          "alternativ": [
+            "Vissa grupper hade förmåner som andra saknade.",
+            "Alla medborgare var lika inför lagen.",
+            "Kungen delade makten med ett folkvalt parlament."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "Varför kallade Ludvig XVI till generalständernas möte i Versailles 1789?",
+          "alternativ": [
+            "Han ville avskaffa adelns och prästernas privilegier.",
+            "Han behövde parlamentets godkännande för att ändra skattesystemet.",
+            "Han ville ha stöd för ett krig mot Österrike och Preussen."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Varför lämnade tredje ståndet förhandlingarna och bildade nationalförsamlingen?",
+          "alternativ": [
+            "Kungen hade förbjudit dem att delta i mötet.",
+            "De ville att Frankrike genast skulle bli en republik.",
+            "Med en röst per stånd kunde adeln och prästerna rösta ned dem."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "Vad var skräckväldet?",
+          "alternativ": [
+            "Napoleons styre med censur och hemlig polis.",
+            "De radikalas styre under Robespierre då misstänkta motståndare avrättades.",
+            "Kungens försök att slå ned revolutionen med armén."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Hur tog Napoleon Bonaparte makten i Frankrike 1799?",
+          "alternativ": [
+            "Genom en statskupp.",
+            "Genom att vinna ett val.",
+            "Genom att ärva kronan."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "Vad var Code Napoléon?",
+          "alternativ": [
+            "Ett fredsavtal mellan Frankrike och Storbritannien.",
+            "En lag som gav adeln tillbaka dess privilegier.",
+            "En ny lagbok som bland annat gav likhet inför lagen."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "Vad hände med Finland 1809?",
+          "alternativ": [
+            "Sverige förlorade Finland till Ryssland.",
+            "Finland blev en självständig stat.",
+            "Finland erövrades av Napoleons armé."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "Varför misslyckades Napoleons fälttåg mot Ryssland 1812?",
+          "alternativ": [
+            "Storbritanniens flotta stoppade arméns förnödenheter.",
+            "Preussen och Österrike bytte sida under fälttåget.",
+            "Ryssarna brände allt på vägen så att armén saknade mat."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "Vad var syftet med Wienkongressen 1814–1815?",
+          "alternativ": [
+            "Att sprida franska revolutionens idéer i Europa.",
+            "Att återskapa Europa så som det varit före revolutionen.",
+            "Att ena de tyska staterna till ett rike."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Varför drabbades Storbritannien inte av revolutioner på samma sätt som Frankrike?",
+          "alternativ": [
+            "Arbetarklassen hade redan fått rösträtt.",
+            "De styrande genomförde reformer för att undvika revolution.",
+            "Kungen var enväldig och slog ned alla protester."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Vilken ideologi betonade individens frihet och fri konkurrens?",
+          "alternativ": [
+            "Konservatismen.",
+            "Socialismen.",
+            "Liberalismen."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "Vad menade Marx med den materialistiska historieuppfattningen?",
+          "alternativ": [
+            "Att de ekonomiska förhållandena styr hur samhället utvecklas.",
+            "Att stora ledare och deras idéer driver historien framåt.",
+            "Att religionen avgör hur ett samhälle är ordnat."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "Vem ledde Tysklands enande?",
+          "alternativ": [
+            "Giuseppe Mazzini.",
+            "Viktor Emanuel II.",
+            "Otto von Bismarck."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "Varför kallades det osmanska riket ”Europas sjuke man” under 1800-talet?",
+          "alternativ": [
+            "Sultanen var sjuk under större delen av 1800-talet.",
+            "Riket var i en lång nedgång och höll på att falla sönder.",
+            "Riket drabbades av svåra epidemier."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Varför ökade krigsrisken i Europa under den väpnade freden 1871–1914?",
+          "alternativ": [
+            "Kapprustning, allianser och kampen om kolonier.",
+            "Frankrike blev den starkaste staten efter Wienkongressen.",
+            "Det osmanska riket erövrade stora delar av Balkan."
+          ],
+          "ratt": 0
+        }
+      ]
+    },
+    {
+      "typ": "begrepp",
+      "instruktion": "Förklara kortfattat med egna ord.",
+      "rader": 3,
+      "begrepp": [
+        {
+          "term": "L’ancien régime",
+          "poang": 2,
+          "facit": "”Det gamla samhället” – Frankrike före revolutionen: enväldig kung och ett privilegiesamhälle där adel och präster hade förmåner, t.ex. slapp betala skatt."
+        },
+        {
+          "term": "Maktbalanstanken",
+          "poang": 2,
+          "facit": "Idén från Wienkongressen att ingen stat fick bli starkare än de andra stormakterna, för att bevara freden i Europa."
+        },
+        {
+          "term": "Konservatism",
+          "poang": 2,
+          "facit": "Ideologi som ville bevara traditioner och den gamla samhällsordningen. Förändringar skulle ske långsamt och bygga på det som redan fanns."
+        },
+        {
+          "term": "Nationalism",
+          "poang": 2,
+          "facit": "Idén att ett folk med gemensamt språk, historia och kultur ska bilda en egen stat. Växte fram under Napoleonkrigen och kunde verka både splittrande och enande."
+        },
+        {
+          "term": "Klasskamp",
+          "poang": 2,
+          "facit": "Marx idé att historien drivs av kampen mellan de som arbetar och de som äger och tjänar på andras arbete, t.ex. arbetare mot kapitalister."
+        }
+      ]
+    },
+    {
+      "typ": "fritext",
+      "fraga": "I Paris finns gator och platser som är uppkallade efter Napoleon och hans segrar, till exempel Rue Austerlitz och Avenue de Wagram. Varför tror du att man har valt att minnas Napoleon på det sättet? Ge också ett exempel på hur historia används på ett liknande sätt i dag.",
+      "rader": 8,
+      "poang": 4,
+      "historiska_begrepp": [],
+      "kriterier": [
+        "historiebruk",
+        "samband dåtid–nutid"
+      ],
+      "centralt_innehall": [
+        "Hur individer och grupper använt historia i samhällsliv och politik",
+        "Historiens betydelse för identiteter och gemensamma kulturarv"
+      ],
+      "innehall": [
+        "Napoleon gjorde Frankrike till den ledande makten på kontinenten och blev mycket populär; segrarna förknippas med fransk storhet och nationell stolthet.",
+        "Napoleon lät själv bygga monument (triumfbågen) för att fira sina segrar – historien användes för att stärka makten.",
+        "Namnen håller minnet levande, skapar gemensam identitet och används i dag också kommersiellt (hotell, restauranger, turism).",
+        "Exempel i dag: gator, statyer, minnesdagar eller nationalsånger (t.ex. Marseljäsen, Trafalgar Square i London)."
+      ],
+      "bedomning": {
+        "E": "Redogör översiktligt för varför Napoleon hyllas (t.ex. segrarna, nationell stolthet) och ger ett enkelt exempel på liknande historiebruk i dag.",
+        "C": "Förklarar utförligt flera skäl, t.ex. både Napoleons eget bruk av historien och dagens nationella och kommersiella bruk, och värderar med enkla omdömen vad namngivningen betyder i dag.",
+        "A": "Förklarar utförligt och nyanserat varför historien används olika, t.ex. att samma person kan hyllas som nationell hjälte men också ses som krigsherre och diktator, och värderar med nyanserade omdömen betydelsen av sådant historiebruk i dag."
+      }
+    },
+    {
+      "typ": "fritext",
+      "fraga": "Den franska revolutionen brukar ses som början på det långa 1800-talet. Vilka var orsakerna till revolutionen, och vilka konsekvenser fick den för Frankrike och Europa på kort och på lång sikt? Använd begreppen orsak och konsekvens samt kontinuitet och förändring i ditt svar.",
+      "rader": 24,
+      "poang": 6,
+      "historiska_begrepp": [
+        "orsak",
+        "konsekvens",
+        "kontinuitet",
+        "förändring"
+      ],
+      "kriterier": [
+        "förändringsprocesser och händelser",
+        "orsaker och konsekvenser",
+        "samband dåtid–nutid",
+        "historiska begrepp"
+      ],
+      "centralt_innehall": [
+        "Demokratisering under 1800- och 1900-talen",
+        "Långsiktiga förändringsprocesser – kontinuitet och förändring",
+        "Förändrade maktförhållanden"
+      ],
+      "innehall": [
+        "Orsaker: statens budgetunderskott, orättvist skattesystem där adel och präster inte betalade skatt, höga matpriser och missväxt, kostnaden för det amerikanska frihetskriget, upplysningens idéer, tredje ståndets brist på inflytande.",
+        "Förloppet: generalständerna, eden i bollhuset och nationalförsamlingen, Bastiljen 1789, rättighetsförklaringen, skräckväldet och avrättningen av kungen 1793, Napoleon tar makten 1799.",
+        "Kort sikt: privilegiesamhället avskaffas, republik, krig mot Österrike och Preussen, skräckvälde, Napoleonkrigen.",
+        "Lång sikt: kungamakten försvagas, revolutionen blir förebild för senare revolutioner (1830, 1848), liberalism, konservatism och socialism får sina rötter här, nationalismen växer, förutsättning för det demokratiska genombrottet.",
+        "Kontinuitet: monarkin återkommer (Napoleon som kejsare, kungadömet efter 1815), Wienkongressen försöker återskapa det gamla Europa, kvinnor fick inte samma rättigheter."
+      ],
+      "bedomning": {
+        "E": "Redogör översiktligt för några orsaker och några konsekvenser och ger något exempel på förändring. Använder begreppen med viss säkerhet.",
+        "C": "Redogör utförligt för flera orsaker (ekonomiska, sociala och idémässiga) och för konsekvenser på både kort och lång sikt. Visar med exempel vad som förändrades och vad som bestod. Drar välgrundade slutsatser om revolutionens betydelse.",
+        "A": "Redogör utförligt och nyanserat: visar hur orsakerna samverkade, skiljer tydligt mellan kort och lång sikt och resonerar om att förändringen inte var rak (monarkin återkom, reaktionära krafter, kvinnorna uteslöts). Förklarar sambandet med dagens samhälle, t.ex. ideologierna och mänskliga rättigheter, och använder begreppen med säkerhet."
+      }
+    },
+    {
+      "typ": "fritext",
+      "fraga": "Historiker förklarar Tysklands enande på olika sätt. Vissa menar att enandet inte hade skett utan Otto von Bismarck (aktörsperspektiv). Andra menar att det berodde på omständigheterna i tiden, till exempel Preussens styrka och nationalismen (strukturperspektiv). Redogör för hur Tyskland enades. Jämför sedan de två förklaringarna och motivera vilken du tycker är mest övertygande. Avsluta med att resonera om vilka konsekvenser enandet fick för Europa. Använd begreppen orsak, konsekvens, aktör och struktur i ditt svar.",
+      "rader": 24,
+      "poang": 6,
+      "historiska_begrepp": [
+        "orsak",
+        "konsekvens",
+        "aktör",
+        "struktur"
+      ],
+      "kriterier": [
+        "olika tolkningar",
+        "personers betydelse",
+        "orsaker och konsekvenser",
+        "historiska begrepp"
+      ],
+      "centralt_innehall": [
+        "Förändrade maktförhållanden och olika historiska förklaringar till dem",
+        "Statsbildning – långsiktiga förändringsprocesser"
+      ],
+      "innehall": [
+        "Förloppet: Bismarck ministerpresident i Preussen 1862, ”blod och järn”; krig mot Danmark 1864, mot Österrike 1866 (nordtyska förbundet), mot Frankrike 1870–71; Tyska riket utropas i Versailles 1871 med Vilhelm I som kejsare.",
+        "Aktörsperspektiv: Bismarcks skicklighet och vilja – han provocerade fram krigen och styrde händelserna.",
+        "Strukturperspektiv: Preussen var industrialiserat och militärt starkare än grannarna; nationalismen var en stark idéströmning; många småstater med gemensamt språk.",
+        "Kombination: strukturerna fanns, men Bismarck fick det att hända (som boken själv föreslår).",
+        "Konsekvenser: maktbalansen från Wienkongressen rubbades, Frankrike förlorade Elsass-Lothringen, Tyskland blev en militär och industriell konkurrent till England, kapprustning och ökade spänningar fram till 1914."
+      ],
+      "bedomning": {
+        "E": "Redogör översiktligt för hur enandet gick till och för de två förklaringarna, förordar en av dem och ger någon enkel motivering. Nämner någon konsekvens för Europa. Använder begreppen med viss säkerhet.",
+        "C": "Redogör utförligt för förloppet och förklarar utförligt Bismarcks betydelse. Jämför förklaringarna, förordar en och motiverar med enkla omdömen. Förklarar flera konsekvenser, t.ex. rubbad maktbalans och ökade spänningar med Frankrike och England.",
+        "A": "Redogör utförligt och nyanserat, jämför förklaringarna och motiverar sitt val med nyanserade omdömen, t.ex. genom att visa hur aktör och struktur samverkade. Förklarar utförligt och nyanserat hur enandet bidrog till vägen mot första världskriget och drar välgrundade och nyanserade slutsatser. Använder begreppen med säkerhet."
+      }
+    }
+  ]
+}
