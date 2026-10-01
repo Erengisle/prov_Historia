@@ -273,6 +273,9 @@ def bygg_facit(prov, sokvag):
                                     ("Centralt innehåll", "centralt_innehall")):
                 if d.get(nyckel):
                     stycke(doc, f"{etikett}: " + ", ".join(d[nyckel]), storlek=10.5, efter=2, farg=GRA)
+            if d.get("fordjupning"):
+                stycke(doc, f"Bygger på fördjupningen {d['fordjupning']}. Frågan ger själv den bakgrund som behövs.",
+                       storlek=10.5, efter=2, farg=GRA)
             if d.get("innehall"):
                 stycke(doc, "Ett bra svar tar upp:", fet=True, hall_ihop=True)
                 for punkt in d["innehall"]:

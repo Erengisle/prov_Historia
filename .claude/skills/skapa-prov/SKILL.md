@@ -29,6 +29,11 @@ Skillen gör ett prov i tre steg: **läs kapitlet → skriv provet som `prov.jso
 
 **Allt i provet ska gå att besvara med kapitlet.** Fråga aldrig om något som inte står där.
 
+**Brödtext och fördjupningar.** Kapitlen innehåller fördjupningsrutor med annan färg eller ram och egen rubrik, ofta i versaler: *Källor*, *Historiebruk*, *Debatt*, porträtt (t.ex. Olympe de Gouges) och temarutor (t.ex. Det osmanska riket, Det habsburgska riket). Det är inte säkert att eleverna har läst dem. Rutor som bara sammanfattar brödtexten (t.ex. "…s konsekvenser", "…s resultat") och kapitelsammanfattningen räknas som brödtext.
+- Flervalsfrågor och begrepp ska gå att besvara med **brödtexten**.
+- En fritextfråga får utgå från en fördjupning bara om frågan själv ger den bakgrund som behövs, så att den som inte läst rutan ändå kan svara. Ange då rutan i fältet `fordjupning`, så syns det i facit.
+- Är du osäker på om en ruta är en fördjupning: räkna den som fördjupning och nämn det i överlämningen.
+
 ### 2. Upplägg (standard)
 
 Om läraren inte säger något annat:
@@ -95,7 +100,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
      "begrepp": [{"term": "…", "facit": "…", "poang": 2}]},
     {"typ": "fritext", "fraga": "…", "rader": 8, "poang": 4,
      "historiska_begrepp": [], "kriterier": ["orsaker och konsekvenser"],
-     "centralt_innehall": ["…"], "innehall": ["…"],
+     "centralt_innehall": ["…"], "fordjupning": "Historiebruk: Paris (frivilligt fält)", "innehall": ["…"],
      "bedomning": {"E": "…", "C": "…", "A": "…"}}
   ]
 }
