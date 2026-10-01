@@ -2,6 +2,7 @@
   "titel": "Prov: Det långa 1800-talet",
   "rubrik_hoger": "Det långa 1800-talet",
   "utgava": "Gy-25",
+  "kursplan": "Gy-25, Historia nivå 1b",
   "kalla": "Lärobokens kapitel Det långa 1800-talet – mellan tradition och förnyelse, utgåvan för Gy-25 (s. 84–113)",
   "delar": [
     {
@@ -188,8 +189,8 @@
         "samband dåtid–nutid"
       ],
       "centralt_innehall": [
-        "Hur individer och grupper använt historia i samhällsliv och politik",
-        "Historiens betydelse för identiteter och gemensamma kulturarv"
+        "Historiebruk – hur historia används i vardagsliv, samhällsliv och politik och påverkar identitet och värderingar",
+        "Samband mellan det förflutna och nutida förhållanden"
       ],
       "fordjupning": "Historiebruk: Paris",
       "innehall": [
@@ -199,9 +200,9 @@
         "Exempel i dag: gator, statyer, minnesdagar eller nationalsånger (t.ex. Marseljäsen, Trafalgar Square i London)."
       ],
       "bedomning": {
-        "E": "Redogör översiktligt för varför Napoleon hyllas (t.ex. segrarna, nationell stolthet) och ger ett enkelt exempel på liknande historiebruk i dag.",
-        "C": "Förklarar utförligt flera skäl, t.ex. både Napoleons eget bruk av historien och dagens nationella och kommersiella bruk, och värderar med enkla omdömen vad namngivningen betyder i dag.",
-        "A": "Förklarar utförligt och nyanserat varför historien används olika, t.ex. att samma person kan hyllas som nationell hjälte men också ses som krigsherre och diktator, och värderar med nyanserade omdömen betydelsen av sådant historiebruk i dag."
+        "E": "För enkla resonemang om varför Napoleon och hans segrar hyllas med gatunamn, t.ex. nationell stolthet eller att Napoleon själv ville fira sina segrar, och ger ett enkelt exempel på liknande historiebruk i dag.",
+        "C": "För utvecklade resonemang om flera syften: att Napoleon själv använde historien för att stärka sin makt, att namnen skapar nationell identitet och att de i dag också används kommersiellt. Ger ett relevant nutida exempel och förklarar dess syfte.",
+        "A": "För utvecklade och nyanserade resonemang, t.ex. om att samma historia kan användas på olika sätt och för olika syften – Napoleon som nationell hjälte eller som krigsherre och diktator – och om hur sådant historiebruk påverkar människors identitet och värderingar i dag."
       }
     },
     {
@@ -217,14 +218,12 @@
       ],
       "kriterier": [
         "förändringsprocesser och händelser",
-        "orsaker och konsekvenser",
-        "samband dåtid–nutid",
-        "historiska begrepp"
+        "resonemang med historiska begrepp",
+        "samband dåtid–nutid"
       ],
       "centralt_innehall": [
-        "Demokratisering under 1800- och 1900-talen",
-        "Långsiktiga förändringsprocesser – kontinuitet och förändring",
-        "Förändrade maktförhållanden"
+        "Framgångar och motgångar för demokratisering från upplysningstiden till nutid",
+        "Begreppen orsak och konsekvens, kontinuitet och förändring"
       ],
       "innehall": [
         "Orsaker: statens budgetunderskott, orättvist skattesystem där adel och präster inte betalade skatt, höga matpriser och missväxt, kostnaden för det amerikanska frihetskriget, upplysningens idéer, tredje ståndets brist på inflytande.",
@@ -234,9 +233,9 @@
         "Kontinuitet: monarkin återkommer (Napoleon som kejsare, kungadömet efter 1815), Wienkongressen försöker återskapa det gamla Europa, kvinnor fick inte samma rättigheter."
       ],
       "bedomning": {
-        "E": "Redogör översiktligt för några orsaker och några konsekvenser och ger något exempel på förändring. Använder begreppen med viss säkerhet.",
-        "C": "Redogör utförligt för flera orsaker (ekonomiska, sociala och idémässiga) och för konsekvenser på både kort och lång sikt. Visar med exempel vad som förändrades och vad som bestod. Drar välgrundade slutsatser om revolutionens betydelse.",
-        "A": "Redogör utförligt och nyanserat: visar hur orsakerna samverkade, skiljer tydligt mellan kort och lång sikt och resonerar om att förändringen inte var rak (monarkin återkom, reaktionära krafter, kvinnorna uteslöts). Förklarar sambandet med dagens samhälle, t.ex. ideologierna och mänskliga rättigheter, och använder begreppen med säkerhet."
+        "E": "Visar godtagbara kunskaper om några orsaker och konsekvenser, t.ex. det orättvisa skattesystemet och att privilegiesamhället avskaffades. För enkla resonemang med begreppen och ger exempel på och förklarar översiktligt något samband med i dag.",
+        "C": "Visar goda kunskaper om flera orsaker (ekonomiska, sociala och idémässiga) och om konsekvenser på både kort och lång sikt. För utvecklade resonemang om vad som förändrades och vad som bestod, och förklarar utförligt samband med nutiden, t.ex. ideologierna eller mänskliga rättigheter.",
+        "A": "Visar mycket goda kunskaper och för utvecklade och nyanserade resonemang om hur orsakerna samverkade och om att förändringen inte var rak: monarkin återkom, Wienkongressen och reaktionära krafter, kvinnorna uteslöts – framgångar och motgångar för demokratiseringen. Förklarar utförligt och nyanserat samband med i dag."
       }
     },
     {
@@ -251,14 +250,14 @@
         "struktur"
       ],
       "kriterier": [
-        "olika tolkningar",
-        "personers betydelse",
-        "orsaker och konsekvenser",
-        "historiska begrepp"
+        "aktörer",
+        "olika tolkningar och perspektiv",
+        "resonemang med historiska begrepp och teorier",
+        "orsaker och konsekvenser"
       ],
       "centralt_innehall": [
-        "Förändrade maktförhållanden och olika historiska förklaringar till dem",
-        "Statsbildning – långsiktiga förändringsprocesser"
+        "Begreppen aktör och struktur samt orsak och konsekvens",
+        "Konflikter och långa historiska linjer med fokus på makt"
       ],
       "fordjupning": "Debatt: Aktör eller struktur? Fallet Tysklands enande",
       "innehall": [
@@ -269,9 +268,9 @@
         "Konsekvenser: maktbalansen från Wienkongressen rubbades, Frankrike förlorade Elsass-Lothringen, Tyskland blev en militär och industriell konkurrent till England, kapprustning och ökade spänningar fram till 1914."
       ],
       "bedomning": {
-        "E": "Redogör översiktligt för hur enandet gick till och för de två förklaringarna, förordar en av dem och ger någon enkel motivering. Nämner någon konsekvens för Europa. Använder begreppen med viss säkerhet.",
-        "C": "Redogör utförligt för förloppet och förklarar utförligt Bismarcks betydelse. Jämför förklaringarna, förordar en och motiverar med enkla omdömen. Förklarar flera konsekvenser, t.ex. rubbad maktbalans och ökade spänningar med Frankrike och England.",
-        "A": "Redogör utförligt och nyanserat, jämför förklaringarna och motiverar sitt val med nyanserade omdömen, t.ex. genom att visa hur aktör och struktur samverkade. Förklarar utförligt och nyanserat hur enandet bidrog till vägen mot första världskriget och drar välgrundade och nyanserade slutsatser. Använder begreppen med säkerhet."
+        "E": "Visar godtagbara kunskaper om hur Tyskland enades och om de två förklaringarna. För enkla resonemang med aktör och struktur, väljer en förklaring med en enkel motivering och nämner någon konsekvens för Europa.",
+        "C": "Visar goda kunskaper om förloppet (de tre krigen, Bismarcks roll, Preussens styrka). För utvecklade resonemang där förklaringarna jämförs och valet motiveras, och förklarar flera konsekvenser, t.ex. rubbad maktbalans och ökade spänningar med Frankrike och England.",
+        "A": "Visar mycket goda kunskaper och för utvecklade och nyanserade resonemang som visar hur aktör och struktur samverkade och väger förklaringarna mot varandra. Förklarar utförligt och nyanserat hur enandet bidrog till vägen mot första världskriget."
       }
     }
   ]

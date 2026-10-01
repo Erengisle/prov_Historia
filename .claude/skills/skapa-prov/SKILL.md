@@ -14,7 +14,7 @@ Skillen gör ett prov i tre steg: **läs kapitlet → skriv provet som `prov.jso
 |---|---|
 | `kapitel/` | Bokens kapitel, inskannade (PDF). Filnamnet anger utgåvan: `… Gy-11.pdf` eller `… Gy-25.pdf`. |
 | `exempelprov/` | Lärarens tidigare prov. Visar stil, språknivå och upplägg. |
-| `.claude/skills/skapa-prov/kursplan-gy11.md` | Centralt innehåll och betygskriterier (E/C/A), Gy-11. Motsvarande fil för Gy-25 heter `kursplan-gy25.md` när den finns. |
+| `.claude/skills/skapa-prov/kursplan-gy11.md`, `kursplan-gy25.md` | Centralt innehåll och betygskriterier (E/C/A) för Gy-11 respektive Gy-25 (Historia nivå 1b). |
 | `prov/<namn>/` | Här hamnar nya prov: `prov.json`, `*_elev.docx`, `*_facit.docx`, `*_trelson.docx/.txt`. |
 
 ## Arbetsgång
@@ -64,7 +64,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 **Fritextfrågor (resonemang)**
 - Del 3: en fråga som kräver en förklaring eller ett perspektiv, t.ex. *"…Vilket perspektiv, och varför tror du att det är så?"*
 - Del 4: en öppen fråga som kräver resonemang och där eleven ska använda historiska begrepp: **orsak och konsekvens, kontinuitet och förändring, villkor och värderingar** (och vid behov *förklaring*, *jämförelse*). Skriv ut i frågan vilka begrepp som ska användas, som i exempelproven.
-- Fritextfrågorna ska ge eleven möjlighet att visa kunskaper enligt **betygskriterierna i kursplanen för rätt utgåva** (läs filen). Låt frågorna tillsammans täcka flera av kriteriernas områden, i mån av vad kapitlet ger stöd för:
+- Fritextfrågorna ska ge eleven möjlighet att visa kunskaper enligt **betygskriterierna i kursplanen för rätt utgåva** (läs filen). Låt frågorna tillsammans täcka flera av kriteriernas områden, i mån av vad kapitlet ger stöd för. Använd områdena och progressionsorden i kursplanfilen för rätt utgåva – de skiljer sig mellan Gy-11 och Gy-25 (Gy-25: godtagbara → goda → mycket goda kunskaper, enkla → utvecklade → utvecklade och nyanserade resonemang). Ungefärliga områden:
   - förändringsprocesser, händelser och personer – förlopp, orsaker och konsekvenser
   - personers betydelse för skeenden
   - olika tolkningar (jämföra, förorda en, motivera)
@@ -92,6 +92,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
   "titel": "Kapiteltest 23",
   "rubrik_hoger": "Kapitel 23",
   "utgava": "Gy-25",
+  "kursplan": "Gy-25, Historia nivå 1b",
   "kalla": "Fundament Historia 7–9, kapitel 23",
   "delar": [
     {"typ": "flerval", "instruktion": "Välj rätt alternativ.",

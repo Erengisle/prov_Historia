@@ -249,6 +249,8 @@ def bygg_facit(prov, sokvag):
     info = f"Totalt {poang(prov)} poäng."
     if prov.get("kalla"):
         info = f"Underlag: {prov['kalla']}. " + info
+    if prov.get("kursplan"):
+        info += f" Bedömningsstöd enligt kursplan {prov['kursplan']}."
     stycke(doc, info, storlek=10, efter=6, farg=GRA)
     stycke(doc, "Rättningsnyckel flerval (numrering som i Trelson-filen): " + rattningsnyckel(prov),
            storlek=10, efter=6)
