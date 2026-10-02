@@ -66,10 +66,11 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 - Ordna frågorna ungefär i kapitlets kronologi.
 
 **Begrepp**
-- Välj begrepp som är centrala i kapitlet och som inte redan är besvarade av en flervalsfråga.
+- Välj begrepp som är centrala i kapitlet och som inte redan är besvarade av en flervalsfråga. Ett begrepp får inte heller vara det som en skrivfråga ber eleven förklara eller redogöra för (t.ex. *konservatism* när del 3 handlar om ideologierna, eller *l'ancien régime* när en skrivfråga gäller revolutionens orsaker). Det går bra att ett begrepp kan användas som verktyg i en skrivfråga.
 - Skriv i `facit` ett kort modellsvar (1–3 meningar) med det som krävs för full poäng.
 
 **Fritextfrågor (resonemang)**
+- **Eleven ska inte behöva skriva samma sak flera gånger**, särskilt inte i längre svar. Skrivfrågorna ska handla om olika delar av kapitlet, och de ska inte heller överlappa med begreppsfrågorna. Kontrollera det innan provet byggs.
 - Del 3: en fråga som kräver en förklaring eller ett perspektiv, t.ex. *"…Vilket perspektiv, och varför tror du att det är så?"* Den är obligatorisk och kan högst ge E, så skriv bara E-nivån i `bedomning` (eller alla tre – C och A visas då inte i facit och uppgiftsfil). Frågan ska vara möjlig att klara för en elev på E-nivå.
 - Del 4: en öppen fråga som kräver resonemang och där eleven ska använda historiska begrepp: **orsak och konsekvens, kontinuitet och förändring, villkor och värderingar** (och vid behov *förklaring*, *jämförelse*). Skriv ut i frågan vilka begrepp som ska användas, som i exempelproven.
 - Fritextfrågorna ska ge eleven möjlighet att visa kunskaper enligt **betygskriterierna i kursplanen för rätt utgåva** (läs filen). Låt frågorna tillsammans täcka flera av kriteriernas områden, i mån av vad kapitlet ger stöd för. Använd områdena och progressionsorden i kursplanfilen för rätt utgåva – de skiljer sig mellan Gy-11 och Gy-25 (Gy-25: godtagbara → goda → mycket goda kunskaper, enkla → utvecklade → utvecklade och nyanserade resonemang). Ungefärliga områden:

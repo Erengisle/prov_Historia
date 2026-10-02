@@ -38,6 +38,7 @@ Svaren blir alltså längre och längre genom provet. Ingen tidslinje än.
 - Allt ska gå att besvara med kapitlet.
 - Flervals- och begreppsfrågor bygger bara på brödtexten. Fördjupningsrutorna (Källor, Historiebruk, Debatt, porträtt och temarutor) är inte säkert lästa.
 - En skrivfråga får utgå från en fördjupning bara om frågan själv ger bakgrunden. Facit markerar det.
+- Eleven ska inte behöva skriva samma sak flera gånger, särskilt inte i längre svar. Skrivfrågorna handlar om olika delar av kapitlet, och ett begrepp i del 2 får inte vara det som en skrivfråga ber eleven förklara.
 
 **Läroplaner**
 - Gy-11 och Gy-25 blandas aldrig.

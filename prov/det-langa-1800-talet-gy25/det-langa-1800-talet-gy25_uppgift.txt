@@ -11,38 +11,38 @@ Provets delar:
   Del 5 (fråga 23): frivillig, kan ge högst A
   Del 6 (fråga 24): frivillig, kan ge högst A
 
-Fråga 16: Förklara kortfattat med egna ord: L’ancien régime
+Fråga 16: Förklara kortfattat med egna ord: Livegen
   Del: 2 (obligatorisk, kan ge högst E)
   Mål: 1a
-  E: ”Det gamla samhället” – Frankrike före revolutionen: enväldig kung och ett privilegiesamhälle där adel och präster hade förmåner, t.ex. slapp betala skatt.
+  E: En bonde som inte var fri utan var jordägarens egendom, till exempel i Ryssland. Till skillnad från de flesta bönder i Sverige ägde de livegna inte sin jord.
   C: – (begreppsfrågan prövar E-nivå)
   A: – (begreppsfrågan prövar E-nivå)
 
-Fråga 17: Förklara kortfattat med egna ord: Maktbalanstanken
+Fråga 17: Förklara kortfattat med egna ord: Upplyst despot
   Del: 2 (obligatorisk, kan ge högst E)
   Mål: 1a
-  E: Idén från Wienkongressen att ingen stat fick bli starkare än de andra stormakterna, för att bevara freden i Europa.
+  E: En kung eller kejsare som styrde enväldigt men var påverkad av upplysningens idéer och därför genomförde reformer, till exempel förbjöd tortyr eller tillät religionsfrihet. Exempel: Fredrik den store i Preussen och Katarina den stora i Ryssland.
   C: – (begreppsfrågan prövar E-nivå)
   A: – (begreppsfrågan prövar E-nivå)
 
-Fråga 18: Förklara kortfattat med egna ord: Konservatism
-  Del: 2 (obligatorisk, kan ge högst E)
-  Mål: 1a
-  E: Ideologi som ville bevara traditioner och den gamla samhällsordningen. Förändringar skulle ske långsamt och bygga på det som redan fanns.
-  C: – (begreppsfrågan prövar E-nivå)
-  A: – (begreppsfrågan prövar E-nivå)
-
-Fråga 19: Förklara kortfattat med egna ord: Nationalism
+Fråga 18: Förklara kortfattat med egna ord: Nationalism
   Del: 2 (obligatorisk, kan ge högst E)
   Mål: 1a
   E: Idén att ett folk med gemensamt språk, historia och kultur ska bilda en egen stat. Växte fram under Napoleonkrigen och kunde verka både splittrande och enande.
   C: – (begreppsfrågan prövar E-nivå)
   A: – (begreppsfrågan prövar E-nivå)
 
-Fråga 20: Förklara kortfattat med egna ord: Klasskamp
+Fråga 19: Förklara kortfattat med egna ord: Maktbalanstanken
   Del: 2 (obligatorisk, kan ge högst E)
   Mål: 1a
-  E: Marx idé att historien drivs av kampen mellan de som arbetar och de som äger och tjänar på andras arbete, t.ex. arbetare mot kapitalister.
+  E: Idén från Wienkongressen att ingen stat fick bli starkare än de andra stormakterna, för att bevara freden i Europa.
+  C: – (begreppsfrågan prövar E-nivå)
+  A: – (begreppsfrågan prövar E-nivå)
+
+Fråga 20: Förklara kortfattat med egna ord: Reaktionär
+  Del: 2 (obligatorisk, kan ge högst E)
+  Mål: 1a
+  E: Bakåtsträvande. Efter Napoleonkrigen kallades de krafter som ville återskapa samhället som det var före franska revolutionen för reaktionära.
   C: – (begreppsfrågan prövar E-nivå)
   A: – (begreppsfrågan prövar E-nivå)
 
@@ -66,7 +66,7 @@ Fråga 23: Den franska revolutionen brukar ses som början på det långa 1800-t
   Del: 5 (frivillig, kan ge högst A)
   Mål: 1a, 1b, 2
   E: Visar godtagbara kunskaper om några orsaker och konsekvenser, t.ex. det orättvisa skattesystemet och att privilegiesamhället avskaffades. För enkla resonemang med begreppen och ger exempel på och förklarar översiktligt något samband med i dag.
-  C: Visar goda kunskaper om flera orsaker (ekonomiska, sociala och idémässiga) och om konsekvenser på både kort och lång sikt. För utvecklade resonemang om vad som förändrades och vad som bestod, och förklarar utförligt samband med nutiden, t.ex. ideologierna eller mänskliga rättigheter.
+  C: Visar goda kunskaper om flera orsaker (ekonomiska, sociala och idémässiga) och om konsekvenser på både kort och lång sikt. För utvecklade resonemang om vad som förändrades och vad som bestod, och förklarar utförligt samband med nutiden, t.ex. mänskliga rättigheter och likhet inför lagen.
   A: Visar mycket goda kunskaper och för utvecklade och nyanserade resonemang om hur orsakerna samverkade och om att förändringen inte var rak: monarkin återkom, Wienkongressen och reaktionära krafter, kvinnorna uteslöts – framgångar och motgångar för demokratiseringen. Förklarar utförligt och nyanserat samband med i dag.
   Vanliga missförstånd: Räknar upp händelser i ordning utan att skilja på orsaker, förlopp och konsekvenser. Tror att monarkin avskaffades för gott eller att kvinnorna fick samma rättigheter som männen genom revolutionen.
 

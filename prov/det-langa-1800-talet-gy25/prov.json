@@ -166,19 +166,14 @@
       ],
       "begrepp": [
         {
-          "term": "L’ancien régime",
-          "poang": 2,
-          "facit": "”Det gamla samhället” – Frankrike före revolutionen: enväldig kung och ett privilegiesamhälle där adel och präster hade förmåner, t.ex. slapp betala skatt."
+          "term": "Livegen",
+          "facit": "En bonde som inte var fri utan var jordägarens egendom, till exempel i Ryssland. Till skillnad från de flesta bönder i Sverige ägde de livegna inte sin jord.",
+          "poang": 2
         },
         {
-          "term": "Maktbalanstanken",
-          "poang": 2,
-          "facit": "Idén från Wienkongressen att ingen stat fick bli starkare än de andra stormakterna, för att bevara freden i Europa."
-        },
-        {
-          "term": "Konservatism",
-          "poang": 2,
-          "facit": "Ideologi som ville bevara traditioner och den gamla samhällsordningen. Förändringar skulle ske långsamt och bygga på det som redan fanns."
+          "term": "Upplyst despot",
+          "facit": "En kung eller kejsare som styrde enväldigt men var påverkad av upplysningens idéer och därför genomförde reformer, till exempel förbjöd tortyr eller tillät religionsfrihet. Exempel: Fredrik den store i Preussen och Katarina den stora i Ryssland.",
+          "poang": 2
         },
         {
           "term": "Nationalism",
@@ -186,9 +181,14 @@
           "facit": "Idén att ett folk med gemensamt språk, historia och kultur ska bilda en egen stat. Växte fram under Napoleonkrigen och kunde verka både splittrande och enande."
         },
         {
-          "term": "Klasskamp",
+          "term": "Maktbalanstanken",
           "poang": 2,
-          "facit": "Marx idé att historien drivs av kampen mellan de som arbetar och de som äger och tjänar på andras arbete, t.ex. arbetare mot kapitalister."
+          "facit": "Idén från Wienkongressen att ingen stat fick bli starkare än de andra stormakterna, för att bevara freden i Europa."
+        },
+        {
+          "term": "Reaktionär",
+          "facit": "Bakåtsträvande. Efter Napoleonkrigen kallades de krafter som ville återskapa samhället som det var före franska revolutionen för reaktionära.",
+          "poang": 2
         }
       ]
     },
@@ -276,12 +276,12 @@
         "Orsaker: statens budgetunderskott, orättvist skattesystem där adel och präster inte betalade skatt, höga matpriser och missväxt, kostnaden för det amerikanska frihetskriget, upplysningens idéer, tredje ståndets brist på inflytande.",
         "Förloppet: generalständerna, eden i bollhuset och nationalförsamlingen, Bastiljen 1789, rättighetsförklaringen, skräckväldet och avrättningen av kungen 1793, Napoleon tar makten 1799.",
         "Kort sikt: privilegiesamhället avskaffas, republik, krig mot Österrike och Preussen, skräckvälde, Napoleonkrigen.",
-        "Lång sikt: kungamakten försvagas, revolutionen blir förebild för senare revolutioner (1830, 1848), liberalism, konservatism och socialism får sina rötter här, nationalismen växer, förutsättning för det demokratiska genombrottet.",
+        "Lång sikt: kungamakten försvagas, revolutionen blir förebild för senare revolutioner (1830, 1848), ideologierna får sina rötter här (räcker att nämna – ideologierna förklaras i del 3), nationalismen växer, förutsättning för det demokratiska genombrottet.",
         "Kontinuitet: monarkin återkommer (Napoleon som kejsare, kungadömet efter 1815), Wienkongressen försöker återskapa det gamla Europa, kvinnor fick inte samma rättigheter."
       ],
       "bedomning": {
         "E": "Visar godtagbara kunskaper om några orsaker och konsekvenser, t.ex. det orättvisa skattesystemet och att privilegiesamhället avskaffades. För enkla resonemang med begreppen och ger exempel på och förklarar översiktligt något samband med i dag.",
-        "C": "Visar goda kunskaper om flera orsaker (ekonomiska, sociala och idémässiga) och om konsekvenser på både kort och lång sikt. För utvecklade resonemang om vad som förändrades och vad som bestod, och förklarar utförligt samband med nutiden, t.ex. ideologierna eller mänskliga rättigheter.",
+        "C": "Visar goda kunskaper om flera orsaker (ekonomiska, sociala och idémässiga) och om konsekvenser på både kort och lång sikt. För utvecklade resonemang om vad som förändrades och vad som bestod, och förklarar utförligt samband med nutiden, t.ex. mänskliga rättigheter och likhet inför lagen.",
         "A": "Visar mycket goda kunskaper och för utvecklade och nyanserade resonemang om hur orsakerna samverkade och om att förändringen inte var rak: monarkin återkom, Wienkongressen och reaktionära krafter, kvinnorna uteslöts – framgångar och motgångar för demokratiseringen. Förklarar utförligt och nyanserat samband med i dag."
       },
       "vanliga_missforstand": "Räknar upp händelser i ordning utan att skilja på orsaker, förlopp och konsekvenser. Tror att monarkin avskaffades för gott eller att kvinnorna fick samma rättigheter som männen genom revolutionen."
