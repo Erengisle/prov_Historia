@@ -213,7 +213,7 @@ def poangtext(p):
     return f"  ({p} p)" if p else ""
 
 
-# ---------- Kriterier och centralt innehåll (numrerade, K1… och CI1…) ----------
+# ---------- Mål (mål-id som på kriteriesidan: 1a, 1b, 2 …) och centralt innehåll (CI1 …) ----------
 
 SKILLMAPP = Path(__file__).resolve().parent.parent
 
@@ -226,20 +226,20 @@ def las_kriterier(prov):
 
 
 def med_namn(koder, lista):
-    """'K2' -> 'K2 Samband …'. Text som inte är en känd kod skrivs som den är."""
+    """'1b' -> '1b Samband …'. Text som inte är ett känt id skrivs som den är."""
     return [f"{k} {lista[k]}" if lista and k in lista else k for k in koder]
 
 
 def oversikt(doc, prov, kr):
     """Tabeller över vilka kriterier och vilken del av det centrala innehållet varje del av provet prövar."""
-    for rubriktext, nyckel in (("Betygskriterier som prövas", "kriterier"),
+    for rubriktext, nyckel in (("Mål som prövas (id som på kriteriesidan)", "kriterier"),
                                ("Centralt innehåll som prövas", "centralt_innehall")):
         lista = kr[nyckel]
         delar = {k: [str(n) for n, d in enumerate(prov["delar"], 1) if k in d.get(nyckel, [])] for k in lista}
         stycke(doc, f"{rubriktext} (kursplan {kr['kursplan']})", fet=True, fore=8, efter=2, hall_ihop=True)
         tabell = doc.add_table(rows=1, cols=3)
         tabell.style = "Table Grid"
-        for cell, text in zip(tabell.rows[0].cells, ("Nr", "Innehåll", "Prövas i del")):
+        for cell, text in zip(tabell.rows[0].cells, ("Id", "Innehåll", "Prövas i del")):
             cell.paragraphs[0].add_run(text).bold = True
         for k, namn in lista.items():
             rad = tabell.add_row().cells
@@ -300,7 +300,7 @@ def bygg_facit(prov, sokvag):
         oversikt(doc, prov, kr)
 
     def kodrader(d):
-        for etikett, nyckel in (("Betygskriterier", "kriterier"), ("Centralt innehåll", "centralt_innehall")):
+        for etikett, nyckel in (("Mål", "kriterier"), ("Centralt innehåll", "centralt_innehall")):
             if d.get(nyckel):
                 stycke(doc, f"{etikett}: " + "; ".join(med_namn(d[nyckel], kr and kr[nyckel])),
                        storlek=10, efter=2, farg=GRA)
@@ -396,6 +396,61 @@ def rattningsnyckel(prov):
     return "   ".join(f"{f['nr']} {BOKSTAVER[f['ratt']]}" for f in trelsonfragor(prov) if "alternativ" in f)
 
 
+# ---------- Uppgiftsfil för bedömningsskillen historia-bedomning ----------
+
+def bygg_uppgiftsfil(prov, sokvag):
+    """Skriver provet i uppgiftsformatet som skillen historia-bedomning läser
+    (uppgiftskatalogen 'Historia 1b – uppgifter'). Frågenumren är desamma som i Trelson-filen."""
+    kr = las_kriterier(prov) or {}
+    laroplan = kr.get("laroplan") or (prov.get("utgava") or "").replace("-", "")
+    alla, fritext = [], []
+    for d in prov["delar"]:
+        for k in d.get("kriterier", []):
+            if k not in alla:
+                alla.append(k)
+    if kr.get("kriterier"):
+        alla.sort(key=list(kr["kriterier"]).index)
+    rader = [f"Uppgift: {prov['titel']}",
+             f"Läroplan: {laroplan}",
+             f"Mål som testas: {', '.join(alla)}",
+             f"Underlag: {prov.get('kalla', 'inget')}",
+             ""]
+    nummer = {id(x): f["nr"] for x, f in zip(_kallor(prov), trelsonfragor(prov))}
+    flerval = [f for f in trelsonfragor(prov) if "alternativ" in f]
+    for d in prov["delar"]:
+        mal = ", ".join(d.get("kriterier", []))
+        if d["typ"] == "begrepp":
+            for b in d["begrepp"]:
+                rader += [f"Fråga {nummer[id(b)]}: {d.get('instruktion', 'Förklara kortfattat med egna ord.').rstrip('.:')}: {b['term']}",
+                          f"  Mål: {mal}",
+                          f"  E: {b.get('facit', '')}",
+                          "  C: – (begreppsfrågan prövar E-nivå)",
+                          "  A: – (begreppsfrågan prövar E-nivå)",
+                          ""]
+        elif d["typ"] == "fritext":
+            bed = d.get("bedomning", {})
+            rader += [f"Fråga {nummer[id(d)]}: {d['fraga']}", f"  Mål: {mal}"]
+            rader += [f"  {niva}: {bed.get(niva, '')}" for niva in ("E", "C", "A")]
+            if d.get("vanliga_missforstand"):
+                rader.append(f"  Vanliga missförstånd: {d['vanliga_missforstand']}")
+            rader.append("")
+    if flerval:
+        rader.append(f"Lärarens kommentarer: Fråga {flerval[0]['nr']}–{flerval[-1]['nr']} är flervalsfrågor "
+                     f"(mål {', '.join(prov['delar'][0].get('kriterier', []))}) och rättas med nyckeln: {rattningsnyckel(prov)}.")
+    sokvag.write_text("\n".join(rader) + "\n", encoding="utf-8")
+
+
+def _kallor(prov):
+    """Objekten i prov.json i samma ordning som trelsonfragor() numrerar dem."""
+    for d in prov["delar"]:
+        if d["typ"] == "flerval":
+            yield from d["fragor"]
+        elif d["typ"] == "begrepp":
+            yield from d["begrepp"]
+        else:
+            yield d
+
+
 # ---------- Huvudprogram ----------
 
 def till_pdf(docx, mapp):
@@ -435,6 +490,7 @@ def main():
     bygg_elev(prov, elev)
     bygg_facit(prov, facit)
     bygg_trelson(prov, mapp / f"{namn}_trelson.docx", mapp / f"{namn}_trelson.txt")
+    bygg_uppgiftsfil(prov, mapp / f"{namn}_uppgift.txt")
     if args.pdf:
         till_pdf(elev, mapp)
         till_pdf(facit, mapp)

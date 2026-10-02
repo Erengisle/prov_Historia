@@ -1,14 +1,18 @@
 {
   "kursplan": "Gy-11",
+  "laroplan": "Gy11",
+  "not": "Mål-id som på lärarens kriteriesida (fliken Provet) och i skillen historia-bedomning.",
   "kriterier": {
-    "K1": "Förändringsprocesser, händelser och personer samt olika tolkningar av dem",
-    "K2": "Förlopp, orsaker och konsekvenser",
-    "K3": "Enskilda personers betydelse för skeenden",
-    "K4": "Samband mellan det förflutna och nutiden",
-    "K5": "Slutsatser om betydelse för framtiden",
-    "K6": "Historiska begrepp",
-    "K7": "Källmaterial och källkritik",
-    "K8": "Historiebruk"
+    "1a": "Förändringar, händelser, personer och tolkningar",
+    "1b": "Förlopp, orsaker och konsekvenser",
+    "1c": "Enskilda personers betydelse",
+    "1d": "Samband mellan då och nu",
+    "1e": "Slutsatser om framtiden",
+    "2": "Använda historiska begrepp",
+    "3a": "Söka, granska och tolka källmaterial",
+    "3b": "Källkritisk värdering",
+    "4a": "Redogöra för och förklara historiebruk",
+    "4b": "Värdera historiebruk"
   },
   "centralt_innehall": {
     "CI1": "Europeisk epokindelning och problematisering av tidsindelningar",

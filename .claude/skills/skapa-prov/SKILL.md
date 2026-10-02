@@ -14,8 +14,8 @@ Skillen gör ett prov i tre steg: **läs kapitlet → skriv provet som `prov.jso
 |---|---|
 | `kapitel/` | Bokens kapitel, inskannade (PDF). Filnamnet anger utgåvan: `… Gy-11.pdf` eller `… Gy-25.pdf`. |
 | `exempelprov/` | Lärarens tidigare prov. Visar stil, språknivå och upplägg. |
-| `.claude/skills/skapa-prov/kursplan-gy11.md`, `kursplan-gy25.md` | Centralt innehåll (CI1, CI2 …) och betygskriterier (K1, K2 …, varje mening märkt) för Gy-11 respektive Gy-25 (Historia nivå 1b). |
-| `.claude/skills/skapa-prov/kriterier-gy11.json`, `kriterier-gy25.json` | Samma nummer med korta namn – scriptet använder dem i facit. |
+| `.claude/skills/skapa-prov/kursplan-gy11.md`, `kursplan-gy25.md` | Centralt innehåll (CI1, CI2 …) och betygskriterier med mål-id (varje mening märkt) för Gy-11 respektive Gy-25 (Historia nivå 1b). |
+| `.claude/skills/skapa-prov/kriterier-gy11.json`, `kriterier-gy25.json` | Mål-id med korta namn – scriptet använder dem i facit och uppgiftsfilen. Mål-id är desamma som på lärarens kriteriesida (fliken Provet) och i bedömningsskillen `historia-bedomning`: Gy25 `1a, 1b, 2, 3, 4`; Gy11 `1a–1e, 2, 3a, 3b, 4a, 4b`. Hitta inte på egna nummer. |
 | `prov/<namn>/` | Här hamnar nya prov: `prov.json`, `*_elev.docx`, `*_facit.docx`, `*_trelson.docx/.txt`. |
 
 ## Arbetsgång
@@ -76,11 +76,12 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 - Minst en fråga i del 4 ska kunna nå A-nivå: den ska öppna för jämförelser, flera samband, olika tolkningar eller en koppling till nutiden.
 - Ange för varje fritextfråga:
   - `historiska_begrepp` – listan som står i frågan
-  - `kriterier` – vilka betygskriterier frågan prövar, som nummer: `["K1", "K3"]` (se `kriterier-<utgåva>.json`)
+  - `kriterier` – vilka mål frågan prövar, som mål-id: `["1a", "2"]` (se `kriterier-<utgåva>.json`)
   - `centralt_innehall` – vilka punkter i det centrala innehållet frågan hör till, som nummer: `["CI2", "CI6"]`
   - `innehall` – vad ett bra svar bör ta upp, punktlista med fakta från kapitlet
+  - `vanliga_missforstand` – en eller två meningar om typiska fel eller brister i svaren (hamnar i uppgiftsfilen)
   - `bedomning` med nivåerna **E, C, A**, formulerad med kriteriernas progressionsord (se tabellen sist i kursplanfilen): *översiktligt → utförligt → utförligt och nyanserat*, *enkla → välgrundade → välgrundade och nyanserade slutsatser*, *med viss säkerhet → med säkerhet*, *enkla → komplexa exempel* osv. Gör texten konkret för just frågan: skriv vilka orsaker, samband eller jämförelser som krävs på respektive nivå.
-- Ange `kriterier` och `centralt_innehall` (nummer) även för flervals- och begreppsdelen – oftast K1 och de CI som kapitlet tar upp.
+- Ange `kriterier` och `centralt_innehall` (nummer) även för flervals- och begreppsdelen – oftast 1a (Gy11 även 1b) och de CI som kapitlet tar upp.
 - Begreppsfrågor och flerval prövar främst E-nivå (redogöra översiktligt, använda begrepp). Det är fritextfrågorna som skiljer mellan E, C och A.
 
 **Språk**: Svenska. Lägg frågorna på samma språknivå som läroboken i `kapitel/` (exempelproven kommer från en bok för åk 7–9, medan kapitlen kan vara från en gymnasiebok). Korta, tydliga meningar och inga onödigt svåra ord. Bedömningsstödet i facit får använda kriteriernas språk.
@@ -102,7 +103,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
     {"typ": "begrepp", "instruktion": "Förklara kortfattat med egna ord.", "rader": 3,
      "begrepp": [{"term": "…", "facit": "…", "poang": 2}]},
     {"typ": "fritext", "fraga": "…", "rader": 8, "poang": 4,
-     "historiska_begrepp": [], "kriterier": ["K1", "K3"],
+     "historiska_begrepp": [], "kriterier": ["1a", "2"],
      "centralt_innehall": ["CI2"], "fordjupning": "Historiebruk: Paris (frivilligt fält)", "innehall": ["…"],
      "bedomning": {"E": "…", "C": "…", "A": "…"}}
   ]
@@ -120,7 +121,8 @@ python3 .claude/skills/skapa-prov/scripts/bygg_prov.py prov/<namn>/prov.json --p
 ```
 Scriptet kontrollerar JSON-filen (antal flervalsfrågor, 3 alternativ, giltigt `ratt`, fördelning av rätta svar) och skriver i samma mapp:
 - `<namn>_elev.docx` – pappersprovet
-- `<namn>_facit.docx` – facit, bedömningsstöd, rättningsnyckel för flervalsfrågorna och en översikt över vilka kriterier (K) och vilket centralt innehåll (CI) varje del prövar
+- `<namn>_facit.docx` – facit, bedömningsstöd, rättningsnyckel för flervalsfrågorna och en översikt över vilka mål och vilket centralt innehåll (CI) varje del prövar
+- `<namn>_uppgift.txt` – uppgiftsfil i formatet som skillen `historia-bedomning` läser (Uppgift / Läroplan / Mål som testas / Underlag / Fråga N med Mål, E, C, A, Vanliga missförstånd). Läraren kan lägga den i Drive-mappen *Historia 1b – uppgifter*. Frågenumren är desamma som i Trelson-filen.
 - `<namn>_trelson.docx` och `.txt` – provet som en lista av enskilda frågor med löpande nummer (Fråga 1, 2, …), utan kryssrutor och skrivrader, för att kopiera in i Trelson. Flervalsalternativen har bokstäverna A–C. Begreppen blir en fråga var.
 - PDF med `--pdf` (kräver LibreOffice).
 

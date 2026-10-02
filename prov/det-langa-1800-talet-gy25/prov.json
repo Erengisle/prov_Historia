@@ -9,7 +9,7 @@
       "typ": "flerval",
       "instruktion": "Välj rätt alternativ.",
       "kriterier": [
-        "K1"
+        "1a"
       ],
       "centralt_innehall": [
         "CI2",
@@ -158,7 +158,7 @@
       "instruktion": "Förklara kortfattat med egna ord.",
       "rader": 3,
       "kriterier": [
-        "K1"
+        "1a"
       ],
       "centralt_innehall": [
         "CI2",
@@ -199,8 +199,8 @@
       "poang": 4,
       "historiska_begrepp": [],
       "kriterier": [
-        "K2",
-        "K5"
+        "1b",
+        "4"
       ],
       "centralt_innehall": [
         "CI8",
@@ -217,7 +217,8 @@
         "E": "För enkla resonemang om varför Napoleon och hans segrar hyllas med gatunamn, t.ex. nationell stolthet eller att Napoleon själv ville fira sina segrar, och ger ett enkelt exempel på liknande historiebruk i dag.",
         "C": "För utvecklade resonemang om flera syften: att Napoleon själv använde historien för att stärka sin makt, att namnen skapar nationell identitet och att de i dag också används kommersiellt. Ger ett relevant nutida exempel och förklarar dess syfte.",
         "A": "För utvecklade och nyanserade resonemang, t.ex. om att samma historia kan användas på olika sätt och för olika syften – Napoleon som nationell hjälte eller som krigsherre och diktator – och om hur sådant historiebruk påverkar människors identitet och värderingar i dag."
-      }
+      },
+      "vanliga_missforstand": "Beskriver bara Napoleons segrar utan att resonera om varför man valt att minnas dem. Ger ett nutida exempel men förklarar inte vilket syfte det har."
     },
     {
       "typ": "fritext",
@@ -231,9 +232,9 @@
         "förändring"
       ],
       "kriterier": [
-        "K1",
-        "K2",
-        "K3"
+        "1a",
+        "1b",
+        "2"
       ],
       "centralt_innehall": [
         "CI2",
@@ -251,7 +252,8 @@
         "E": "Visar godtagbara kunskaper om några orsaker och konsekvenser, t.ex. det orättvisa skattesystemet och att privilegiesamhället avskaffades. För enkla resonemang med begreppen och ger exempel på och förklarar översiktligt något samband med i dag.",
         "C": "Visar goda kunskaper om flera orsaker (ekonomiska, sociala och idémässiga) och om konsekvenser på både kort och lång sikt. För utvecklade resonemang om vad som förändrades och vad som bestod, och förklarar utförligt samband med nutiden, t.ex. ideologierna eller mänskliga rättigheter.",
         "A": "Visar mycket goda kunskaper och för utvecklade och nyanserade resonemang om hur orsakerna samverkade och om att förändringen inte var rak: monarkin återkom, Wienkongressen och reaktionära krafter, kvinnorna uteslöts – framgångar och motgångar för demokratiseringen. Förklarar utförligt och nyanserat samband med i dag."
-      }
+      },
+      "vanliga_missforstand": "Räknar upp händelser i ordning utan att skilja på orsaker, förlopp och konsekvenser. Tror att monarkin avskaffades för gott eller att kvinnorna fick samma rättigheter som männen genom revolutionen."
     },
     {
       "typ": "fritext",
@@ -265,8 +267,8 @@
         "struktur"
       ],
       "kriterier": [
-        "K1",
-        "K3"
+        "1a",
+        "2"
       ],
       "centralt_innehall": [
         "CI3",
@@ -284,7 +286,8 @@
         "E": "Visar godtagbara kunskaper om hur Tyskland enades och om de två förklaringarna. För enkla resonemang med aktör och struktur, väljer en förklaring med en enkel motivering och nämner någon konsekvens för Europa.",
         "C": "Visar goda kunskaper om förloppet (de tre krigen, Bismarcks roll, Preussens styrka). För utvecklade resonemang där förklaringarna jämförs och valet motiveras, och förklarar flera konsekvenser, t.ex. rubbad maktbalans och ökade spänningar med Frankrike och England.",
         "A": "Visar mycket goda kunskaper och för utvecklade och nyanserade resonemang som visar hur aktör och struktur samverkade och väger förklaringarna mot varandra. Förklarar utförligt och nyanserat hur enandet bidrog till vägen mot första världskriget."
-      }
+      },
+      "vanliga_missforstand": "Återberättar krigen utan att jämföra de två förklaringarna eller ta ställning. Blandar ihop Bismarck och kejsar Vilhelm I, eller tror att Tyskland enades vid Wienkongressen."
     }
   ]
 }

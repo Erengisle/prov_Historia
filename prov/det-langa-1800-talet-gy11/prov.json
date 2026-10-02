@@ -9,8 +9,8 @@
       "typ": "flerval",
       "instruktion": "Välj rätt alternativ.",
       "kriterier": [
-        "K1",
-        "K2"
+        "1a",
+        "1b"
       ],
       "centralt_innehall": [
         "CI2"
@@ -158,7 +158,7 @@
       "instruktion": "Förklara kortfattat med egna ord.",
       "rader": 3,
       "kriterier": [
-        "K1"
+        "1a"
       ],
       "centralt_innehall": [
         "CI2",
@@ -199,8 +199,9 @@
       "poang": 4,
       "historiska_begrepp": [],
       "kriterier": [
-        "K4",
-        "K8"
+        "1d",
+        "4a",
+        "4b"
       ],
       "centralt_innehall": [
         "CI6"
@@ -216,7 +217,8 @@
         "E": "Redogör översiktligt för varför Napoleon hyllas (t.ex. segrarna, nationell stolthet) och ger ett enkelt exempel på liknande historiebruk i dag.",
         "C": "Förklarar utförligt flera skäl, t.ex. både Napoleons eget bruk av historien och dagens nationella och kommersiella bruk, och värderar med enkla omdömen vad namngivningen betyder i dag.",
         "A": "Förklarar utförligt och nyanserat varför historien används olika, t.ex. att samma person kan hyllas som nationell hjälte men också ses som krigsherre och diktator, och värderar med nyanserade omdömen betydelsen av sådant historiebruk i dag."
-      }
+      },
+      "vanliga_missforstand": "Beskriver bara Napoleons segrar utan att resonera om varför man valt att minnas dem. Ger ett nutida exempel men förklarar inte vilket syfte det har."
     },
     {
       "typ": "fritext",
@@ -230,10 +232,10 @@
         "förändring"
       ],
       "kriterier": [
-        "K1",
-        "K2",
-        "K4",
-        "K6"
+        "1a",
+        "1b",
+        "1d",
+        "2"
       ],
       "centralt_innehall": [
         "CI2",
@@ -250,7 +252,8 @@
         "E": "Redogör översiktligt för några orsaker och några konsekvenser och ger något exempel på förändring. Använder begreppen med viss säkerhet.",
         "C": "Redogör utförligt för flera orsaker (ekonomiska, sociala och idémässiga) och för konsekvenser på både kort och lång sikt. Visar med exempel vad som förändrades och vad som bestod. Drar välgrundade slutsatser om revolutionens betydelse.",
         "A": "Redogör utförligt och nyanserat: visar hur orsakerna samverkade, skiljer tydligt mellan kort och lång sikt och resonerar om att förändringen inte var rak (monarkin återkom, reaktionära krafter, kvinnorna uteslöts). Förklarar sambandet med dagens samhälle, t.ex. ideologierna och mänskliga rättigheter, och använder begreppen med säkerhet."
-      }
+      },
+      "vanliga_missforstand": "Räknar upp händelser i ordning utan att skilja på orsaker, förlopp och konsekvenser. Tror att monarkin avskaffades för gott eller att kvinnorna fick samma rättigheter som männen genom revolutionen."
     },
     {
       "typ": "fritext",
@@ -264,10 +267,10 @@
         "struktur"
       ],
       "kriterier": [
-        "K1",
-        "K2",
-        "K3",
-        "K6"
+        "1a",
+        "1b",
+        "1c",
+        "2"
       ],
       "centralt_innehall": [
         "CI2",
@@ -285,7 +288,8 @@
         "E": "Redogör översiktligt för hur enandet gick till och för de två förklaringarna, förordar en av dem och ger någon enkel motivering. Nämner någon konsekvens för Europa. Använder begreppen med viss säkerhet.",
         "C": "Redogör utförligt för förloppet och förklarar utförligt Bismarcks betydelse. Jämför förklaringarna, förordar en och motiverar med enkla omdömen. Förklarar flera konsekvenser, t.ex. rubbad maktbalans och ökade spänningar med Frankrike och England.",
         "A": "Redogör utförligt och nyanserat, jämför förklaringarna och motiverar sitt val med nyanserade omdömen, t.ex. genom att visa hur aktör och struktur samverkade. Förklarar utförligt och nyanserat hur enandet bidrog till vägen mot första världskriget och drar välgrundade och nyanserade slutsatser. Använder begreppen med säkerhet."
-      }
+      },
+      "vanliga_missforstand": "Återberättar krigen utan att jämföra de två förklaringarna eller ta ställning. Blandar ihop Bismarck och kejsar Vilhelm I, eller tror att Tyskland enades vid Wienkongressen."
     }
   ]
 }

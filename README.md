@@ -21,6 +21,7 @@ Resultatet hamnar i `prov/det-langa-1800-talet-gy11/`:
 - `…_elev.docx` – pappersprovet
 - `…_facit.docx` – rätta svar, rättningsnyckel, modellsvar och bedömningsstöd (E/C/A)
 - `…_trelson.docx` / `.txt` – en fråga per block, för att kopiera in i Trelson
+- `…_uppgift.txt` – uppgiftsfil för bedömningsskillen (lägg i Drive-mappen *Historia 1b – uppgifter*)
 - `prov.json` – provet i strukturerad form (används även för rättning)
 
 Bygga om Word-filerna efter en ändring i `prov.json`:

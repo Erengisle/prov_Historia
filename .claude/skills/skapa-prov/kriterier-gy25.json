@@ -1,11 +1,13 @@
 {
   "kursplan": "Gy-25, Historia nivå 1b",
+  "laroplan": "Gy25",
+  "not": "Mål-id som på lärarens kriteriesida (fliken Provet) och i skillen historia-bedomning.",
   "kriterier": {
-    "K1": "Förändringsprocesser, händelser och aktörer utifrån olika tolkningar och perspektiv",
-    "K2": "Samband mellan det förflutna och nutiden",
-    "K3": "Resonemang utifrån historiska begrepp, förklaringsmodeller och teorier",
-    "K4": "Frågor och historiska källor utifrån historisk metod",
-    "K5": "Historiebruk"
+    "1a": "Kunskaper om förändringsprocesser, händelser och aktörer",
+    "1b": "Samband mellan då och nu",
+    "2": "Resonemang utifrån historiska begrepp",
+    "3": "Frågor och resonemang om källor",
+    "4": "Resonemang om historiebruk"
   },
   "centralt_innehall": {
     "CI1": "Europeisk epokindelning och problematisering av tidsindelningar",

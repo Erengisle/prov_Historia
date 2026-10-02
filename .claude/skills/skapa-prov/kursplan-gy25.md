@@ -22,62 +22,61 @@ Undervisningen i ämnet historia på nivå 1b ska behandla följande centrala in
 
 ## Betygskriterier
 
-### Kriterierna i nummerordning
+### Målen i nummerordning
 
-Varje mening i betygskriterierna nedan är märkt med sitt nummer.
+Samma mål-id som på kriteriesidan (fliken Provet) och i bedömningsskillen. Varje mening i betygskriterierna nedan är märkt med sitt id.
 
-| Nr | Kriterium |
+| Id | Mål |
 |---|---|
-| K1 | Förändringsprocesser, händelser och aktörer utifrån olika tolkningar och perspektiv |
-| K2 | Samband mellan det förflutna och nutiden |
-| K3 | Resonemang utifrån historiska begrepp, förklaringsmodeller och teorier |
-| K4 | Frågor och historiska källor utifrån historisk metod |
-| K5 | Historiebruk |
-
+| 1a | Kunskaper om förändringsprocesser, händelser och aktörer |
+| 1b | Samband mellan då och nu |
+| 2 | Resonemang utifrån historiska begrepp |
+| 3 | Frågor och resonemang om källor |
+| 4 | Resonemang om historiebruk |
 
 Av 15 kap. 24 § andra stycket och 20 kap. 37 § andra stycket skollagen (2010:800) följer att läraren vid betygssättningen i ett ämne ska göra en sammantagen bedömning av elevens kunskaper på den aktuella nivån i ämnet i förhållande till de betygskriterier som gäller för ämnet som helhet och sätta det betyg som bäst motsvarar elevens kunskaper. Samtliga kriterier för betyget E ska dock vara uppfyllda för att eleven ska kunna få ett godkänt betyg.
 
 ### Betyget E
-**(K1)** Eleven visar godtagbara kunskaper om förändringsprocesser, händelser och aktörer under olika tidsperioder utifrån olika tolkningar och perspektiv. **(K2)** Eleven ger exempel på och förklarar översiktligt samband mellan skeenden i det förflutna och förhållanden i nutiden.
+**(1a)** Eleven visar godtagbara kunskaper om förändringsprocesser, händelser och aktörer under olika tidsperioder utifrån olika tolkningar och perspektiv. **(1b)** Eleven ger exempel på och förklarar översiktligt samband mellan skeenden i det förflutna och förhållanden i nutiden.
 
-**(K3)** Eleven för enkla resonemang om det historiska innehållet utifrån historiska begrepp och förklaringsmodeller.
+**(2)** Eleven för enkla resonemang om det historiska innehållet utifrån historiska begrepp och förklaringsmodeller.
 
-**(K4)** Eleven formulerar frågor om det historiska innehållet och använder olika historiska källor för att undersöka historiska frågeställningar samt för enkla resonemang om källornas innehåll och användbarhet utifrån historisk metod.
+**(3)** Eleven formulerar frågor om det historiska innehållet och använder olika historiska källor för att undersöka historiska frågeställningar samt för enkla resonemang om källornas innehåll och användbarhet utifrån historisk metod.
 
-**(K5)** Eleven för enkla resonemang om hur historia kan användas i olika sammanhang och för olika syften.
+**(4)** Eleven för enkla resonemang om hur historia kan användas i olika sammanhang och för olika syften.
 
 ### Betyget D
 Elevens kunskaper bedöms sammantaget vara mellan C och E.
 
 ### Betyget C
-**(K1)** Eleven visar goda kunskaper om förändringsprocesser, händelser och aktörer under olika tidsperioder utifrån olika tolkningar och perspektiv. **(K2)** Eleven ger exempel på och förklarar utförligt samband mellan skeenden i det förflutna och förhållanden i nutiden.
+**(1a)** Eleven visar goda kunskaper om förändringsprocesser, händelser och aktörer under olika tidsperioder utifrån olika tolkningar och perspektiv. **(1b)** Eleven ger exempel på och förklarar utförligt samband mellan skeenden i det förflutna och förhållanden i nutiden.
 
-**(K3)** Eleven för utvecklade resonemang om det historiska innehållet utifrån historiska begrepp och teorier.
+**(2)** Eleven för utvecklade resonemang om det historiska innehållet utifrån historiska begrepp och teorier.
 
-**(K4)** Eleven formulerar välgrundade frågor om det historiska innehållet och använder olika historiska källor för att undersöka historiska frågeställningar samt för välgrundade resonemang om olika historiska källors innehåll och användbarhet utifrån historisk metod.
+**(3)** Eleven formulerar välgrundade frågor om det historiska innehållet och använder olika historiska källor för att undersöka historiska frågeställningar samt för välgrundade resonemang om olika historiska källors innehåll och användbarhet utifrån historisk metod.
 
-**(K5)** Eleven för utvecklade resonemang om hur historia kan användas i olika sammanhang och för olika syften.
+**(4)** Eleven för utvecklade resonemang om hur historia kan användas i olika sammanhang och för olika syften.
 
 ### Betyget B
 Elevens kunskaper bedöms sammantaget vara mellan A och C.
 
 ### Betyget A
-**(K1)** Eleven visar mycket goda kunskaper om förändringsprocesser, händelser och aktörer under olika tidsperioder utifrån olika tolkningar och perspektiv. **(K2)** Eleven ger exempel på och förklarar utförligt och nyanserat samband mellan skeenden i det förflutna och förhållanden i nutiden.
+**(1a)** Eleven visar mycket goda kunskaper om förändringsprocesser, händelser och aktörer under olika tidsperioder utifrån olika tolkningar och perspektiv. **(1b)** Eleven ger exempel på och förklarar utförligt och nyanserat samband mellan skeenden i det förflutna och förhållanden i nutiden.
 
-**(K3)** Eleven för utvecklade och nyanserade resonemang om det historiska innehållet utifrån historiska begrepp och teorier.
+**(2)** Eleven för utvecklade och nyanserade resonemang om det historiska innehållet utifrån historiska begrepp och teorier.
 
-**(K4)** Eleven formulerar välgrundade och nyanserade frågor om det historiska innehållet och använder olika historiska källor för att undersöka historiska frågeställningar samt för välgrundade och nyanserade resonemang om källornas innehåll och användbarhet utifrån historisk metod.
+**(3)** Eleven formulerar välgrundade och nyanserade frågor om det historiska innehållet och använder olika historiska källor för att undersöka historiska frågeställningar samt för välgrundade och nyanserade resonemang om källornas innehåll och användbarhet utifrån historisk metod.
 
-**(K5)** Eleven för utvecklade och nyanserade resonemang om hur historia kan användas i olika sammanhang och för olika syften.
+**(4)** Eleven för utvecklade och nyanserade resonemang om hur historia kan användas i olika sammanhang och för olika syften.
 
 ## Progression E – C – A (sammanfattning för bedömningsstöd)
 
 | Förmåga | E | C | A |
 |---|---|---|---|
-| K1 Kunskaper om förändringsprocesser, händelser och aktörer utifrån olika tolkningar och perspektiv | godtagbara | goda | mycket goda |
-| K2 Samband dåtid – nutid | ger exempel, förklarar översiktligt | ger exempel, förklarar utförligt | ger exempel, förklarar utförligt och nyanserat |
-| K3 Resonemang med historiska begrepp | enkla resonemang, begrepp och förklaringsmodeller | utvecklade resonemang, begrepp och teorier | utvecklade och nyanserade resonemang, begrepp och teorier |
-| K4 Frågor och källor | formulerar frågor; enkla resonemang om källors innehåll och användbarhet | välgrundade frågor; välgrundade resonemang | välgrundade och nyanserade frågor; välgrundade och nyanserade resonemang |
-| K5 Historiebruk | enkla resonemang | utvecklade resonemang | utvecklade och nyanserade resonemang |
+| 1a Kunskaper om förändringsprocesser, händelser och aktörer utifrån olika tolkningar och perspektiv | godtagbara | goda | mycket goda |
+| 1b Samband dåtid – nutid | ger exempel, förklarar översiktligt | ger exempel, förklarar utförligt | ger exempel, förklarar utförligt och nyanserat |
+| 2 Resonemang med historiska begrepp | enkla resonemang, begrepp och förklaringsmodeller | utvecklade resonemang, begrepp och teorier | utvecklade och nyanserade resonemang, begrepp och teorier |
+| 3 Frågor och källor | formulerar frågor; enkla resonemang om källors innehåll och användbarhet | välgrundade frågor; välgrundade resonemang | välgrundade och nyanserade frågor; välgrundade och nyanserade resonemang |
+| 4 Historiebruk | enkla resonemang | utvecklade resonemang | utvecklade och nyanserade resonemang |
 
 Begreppsparen som nämns uttryckligen i det centrala innehållet: **aktör och struktur, orsak och konsekvens, kontinuitet och förändring.**
