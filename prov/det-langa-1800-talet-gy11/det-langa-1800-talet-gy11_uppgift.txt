@@ -1,0 +1,81 @@
+Uppgift: Prov: Det långa 1800-talet
+Läroplan: Gy11
+Mål som testas: 1a, 1b, 1c, 1d, 2, 4a, 4b
+Underlag: Lärobokens kapitel Det långa 1800-talet – mellan tradition och förnyelse, utgåvan för Gy-11 (s. 74–99)
+
+Provets delar:
+  Del 1 (fråga 1–15): obligatorisk, kan ge högst E
+  Del 2 (fråga 16–20): obligatorisk, kan ge högst E
+  Del 3 (fråga 21): obligatorisk, kan ge högst E
+  Del 4 (fråga 22): frivillig, kan ge högst A
+  Del 5 (fråga 23): frivillig, kan ge högst A
+  Del 6 (fråga 24): frivillig, kan ge högst A
+
+Fråga 16: Förklara kortfattat med egna ord: Livegen
+  Del: 2 (obligatorisk, kan ge högst E)
+  Mål: 1a
+  E: En bonde som inte var fri utan var jordägarens egendom, till exempel i Ryssland. Till skillnad från de flesta bönder i Sverige ägde de livegna inte sin jord.
+  C: – (begreppsfrågan prövar E-nivå)
+  A: – (begreppsfrågan prövar E-nivå)
+
+Fråga 17: Förklara kortfattat med egna ord: Upplyst despot
+  Del: 2 (obligatorisk, kan ge högst E)
+  Mål: 1a
+  E: En kung eller kejsare som styrde enväldigt men var påverkad av upplysningens idéer och därför genomförde reformer, till exempel förbjöd tortyr eller tillät religionsfrihet. Exempel: Fredrik den store i Preussen och Katarina den stora i Ryssland.
+  C: – (begreppsfrågan prövar E-nivå)
+  A: – (begreppsfrågan prövar E-nivå)
+
+Fråga 18: Förklara kortfattat med egna ord: Nationalism
+  Del: 2 (obligatorisk, kan ge högst E)
+  Mål: 1a
+  E: Idén att ett folk med gemensamt språk, historia och kultur ska bilda en egen stat. Växte fram under Napoleonkrigen och kunde verka både splittrande och enande.
+  C: – (begreppsfrågan prövar E-nivå)
+  A: – (begreppsfrågan prövar E-nivå)
+
+Fråga 19: Förklara kortfattat med egna ord: Maktbalanstanken
+  Del: 2 (obligatorisk, kan ge högst E)
+  Mål: 1a
+  E: Idén från Wienkongressen att ingen stat fick bli starkare än de andra stormakterna, för att bevara freden i Europa.
+  C: – (begreppsfrågan prövar E-nivå)
+  A: – (begreppsfrågan prövar E-nivå)
+
+Fråga 20: Förklara kortfattat med egna ord: Reaktionär
+  Del: 2 (obligatorisk, kan ge högst E)
+  Mål: 1a
+  E: Bakåtsträvande. Efter Napoleonkrigen kallades de krafter som ville återskapa samhället som det var före franska revolutionen för reaktionära.
+  C: – (begreppsfrågan prövar E-nivå)
+  A: – (begreppsfrågan prövar E-nivå)
+
+Fråga 21: Under 1800-talet växte nya ideologier fram. Välj liberalismen, konservatismen eller socialismen. Förklara varför ideologin växte fram och vad den ville förändra eller bevara. Ge också ett exempel på hur ideologin syns i samhället i dag. Använd begreppen orsak och konsekvens.
+  Del: 3 (obligatorisk, kan ge högst E)
+  Mål: 1a, 1b, 1d, 2
+  E: Redogör översiktligt för varför den valda ideologin växte fram, t.ex. medelklassens brist på inflytande, reaktionen mot revolutionen eller arbetarnas villkor, och för vad den ville förändra eller bevara. Använder med viss säkerhet begreppen orsak och konsekvens, och ger ett enkelt exempel på och förklarar översiktligt ett samband med i dag, t.ex. att ideologin blev grund för politiska partier.
+  C: – (delen kan högst ge E)
+  A: – (delen kan högst ge E)
+  Vanliga missförstånd: Räknar upp ideologins idéer utan att förklara varför den växte fram. Ger ett exempel från i dag utan att visa hur det hänger ihop med 1800-talet. Blandar ihop ideologierna, t.ex. tror att 1800-talets liberaler ville ge alla rösträtt.
+
+Fråga 22: I Paris finns gator och platser som är uppkallade efter Napoleon och hans segrar, till exempel Rue Austerlitz och Avenue de Wagram. Varför tror du att man har valt att minnas Napoleon på det sättet? Ge också ett exempel på hur historia används på ett liknande sätt i dag.
+  Del: 4 (frivillig, kan ge högst A)
+  Mål: 1d, 4a, 4b
+  E: Redogör översiktligt för varför Napoleon hyllas (t.ex. segrarna, nationell stolthet) och ger ett enkelt exempel på liknande historiebruk i dag.
+  C: Förklarar utförligt flera skäl, t.ex. både Napoleons eget bruk av historien och dagens nationella och kommersiella bruk, och värderar med enkla omdömen vad namngivningen betyder i dag.
+  A: Förklarar utförligt och nyanserat varför historien används olika, t.ex. att samma person kan hyllas som nationell hjälte men också ses som krigsherre och diktator, och värderar med nyanserade omdömen betydelsen av sådant historiebruk i dag.
+  Vanliga missförstånd: Beskriver bara Napoleons segrar utan att resonera om varför man valt att minnas dem. Ger ett nutida exempel men förklarar inte vilket syfte det har.
+
+Fråga 23: Den franska revolutionen brukar ses som början på det långa 1800-talet. Vilka var orsakerna till revolutionen, och vilka konsekvenser fick den för Frankrike och Europa på kort och på lång sikt? Använd begreppen orsak och konsekvens samt kontinuitet och förändring i ditt svar.
+  Del: 5 (frivillig, kan ge högst A)
+  Mål: 1a, 1b, 1d, 2
+  E: Redogör översiktligt för några orsaker och några konsekvenser och ger något exempel på förändring. Använder begreppen med viss säkerhet.
+  C: Redogör utförligt för flera orsaker (ekonomiska, sociala och idémässiga) och för konsekvenser på både kort och lång sikt. Visar med exempel vad som förändrades och vad som bestod. Drar välgrundade slutsatser om revolutionens betydelse.
+  A: Redogör utförligt och nyanserat: visar hur orsakerna samverkade, skiljer tydligt mellan kort och lång sikt och resonerar om att förändringen inte var rak (monarkin återkom, reaktionära krafter, kvinnorna uteslöts). Förklarar sambandet med dagens samhälle, t.ex. mänskliga rättigheter och likhet inför lagen, och använder begreppen med säkerhet.
+  Vanliga missförstånd: Räknar upp händelser i ordning utan att skilja på orsaker, förlopp och konsekvenser. Tror att monarkin avskaffades för gott eller att kvinnorna fick samma rättigheter som männen genom revolutionen.
+
+Fråga 24: Historiker förklarar Tysklands enande på olika sätt. Vissa menar att enandet inte hade skett utan Otto von Bismarck (aktörsperspektiv). Andra menar att det berodde på omständigheterna i tiden, till exempel Preussens styrka och nationalismen (strukturperspektiv). Redogör för hur Tyskland enades. Jämför sedan de två förklaringarna och motivera vilken du tycker är mest övertygande. Avsluta med att resonera om vilka konsekvenser enandet fick för Europa. Använd begreppen orsak, konsekvens, aktör och struktur i ditt svar.
+  Del: 6 (frivillig, kan ge högst A)
+  Mål: 1a, 1b, 1c, 2
+  E: Redogör översiktligt för hur enandet gick till och för de två förklaringarna, förordar en av dem och ger någon enkel motivering. Nämner någon konsekvens för Europa. Använder begreppen med viss säkerhet.
+  C: Redogör utförligt för förloppet och förklarar utförligt Bismarcks betydelse. Jämför förklaringarna, förordar en och motiverar med enkla omdömen. Förklarar flera konsekvenser, t.ex. rubbad maktbalans och ökade spänningar med Frankrike och England.
+  A: Redogör utförligt och nyanserat, jämför förklaringarna och motiverar sitt val med nyanserade omdömen, t.ex. genom att visa hur aktör och struktur samverkade. Förklarar utförligt och nyanserat hur enandet bidrog till vägen mot första världskriget och drar välgrundade och nyanserade slutsatser. Använder begreppen med säkerhet.
+  Vanliga missförstånd: Återberättar krigen utan att jämföra de två förklaringarna eller ta ställning. Blandar ihop Bismarck och kejsar Vilhelm I, eller tror att Tyskland enades vid Wienkongressen.
+
+Lärarens kommentarer: Fråga 1–15 är flervalsfrågor (mål 1a, 1b) och rättas med nyckeln: 1 A   2 B   3 C   4 B   5 A   6 C   7 A   8 C   9 B   10 B   11 C   12 A   13 C   14 B   15 A. Eleven svarar med en bokstav efter raden Svar N: (eller ett kryss vid ett alternativ). Tolka svaret generöst, men flagga om eleven har valt mer än ett alternativ. Del 1–3 är obligatoriska och kan tillsammans ge högst E. Del 4–6 är frivilliga och ger eleven möjlighet att visa kunskaper upp till A. Bedöm aldrig en fråga över delens högsta nivå. Flagga i lärarunderlaget varje elev som saknar svar eller har ofullständiga svar i de obligatoriska delarna (fråga 1–21), med frågenumren. Ett tomt svar i en frivillig del är inget fel och ska inte flaggas.

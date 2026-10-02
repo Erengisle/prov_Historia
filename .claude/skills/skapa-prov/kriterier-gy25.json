@@ -1,0 +1,22 @@
+{
+  "kursplan": "Gy-25, Historia nivå 1b",
+  "laroplan": "Gy25",
+  "not": "Mål-id som på lärarens kriteriesida (fliken Provet) och i skillen historia-bedomning.",
+  "kriterier": {
+    "1a": "Kunskaper om förändringsprocesser, händelser och aktörer",
+    "1b": "Samband mellan då och nu",
+    "2": "Resonemang utifrån historiska begrepp",
+    "3": "Frågor och resonemang om källor",
+    "4": "Resonemang om historiebruk"
+  },
+  "centralt_innehall": {
+    "CI1": "Europeisk epokindelning och problematisering av tidsindelningar",
+    "CI2": "Industrialisering samt framgångar och motgångar för demokratisering",
+    "CI3": "Globala förändringsprocesser och händelser; långa linjer med fokus på levnadsvillkor och makt",
+    "CI4": "De nationella minoriteternas historia; rasism, antisemitism och antiziganism",
+    "CI5": "Samband mellan det förflutna och nutiden med relevans för framtiden",
+    "CI6": "Historiska begrepp: aktör och struktur, orsak och konsekvens, kontinuitet och förändring",
+    "CI7": "Tolkning, granskning och värdering av historiska källor",
+    "CI8": "Historiebruk"
+  }
+}

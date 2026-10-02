@@ -1,0 +1,233 @@
+{
+  "titel": "Kapiteltest 22",
+  "rubrik_hoger": "Kapitel 22",
+  "kalla": "Fundament Historia 7–9, kapitel 22 (exempel byggt på exempelprovet för kapitel 22)",
+  "delar": [
+    {
+      "typ": "flerval",
+      "instruktion": "Välj rätt alternativ.",
+      "fragor": [
+        {
+          "fraga": "Vad hände med Östeuropas stater efter andra världskriget?",
+          "alternativ": [
+            "Flera nya militärdiktaturer bildades.",
+            "Nazisterna försökte få makten i flera länder.",
+            "De blev kommunistiska diktaturer."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "Vad kallades gränsen mellan östra och västra Europa?",
+          "alternativ": [
+            "Järnridån.",
+            "Berlinmuren.",
+            "Östblockaden."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "Varför bildades FN?",
+          "alternativ": [
+            "För att återuppbygga Europa.",
+            "För att stoppa framtida storkrig.",
+            "För att hjälpa Östeuropas länder att bli fria från kommunismen."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Vad innebar Trumandoktrinen?",
+          "alternativ": [
+            "USA skulle aktivt arbeta mot kommunism i alla länder.",
+            "USA skulle bidra med ekonomiskt stöd till Europas länder efter kriget.",
+            "USA skulle hjälpa Sydamerikas länder att utveckla handel."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "Vad var Berlinblockaden?",
+          "alternativ": [
+            "Försöket att stänga ute Sovjetunionen från Västberlin.",
+            "Sovjetunionens försök att svälta ut Västberlin.",
+            "Nazitysklands sista försök att försvara Berlin."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Varför bildades kol- och stålunionen?",
+          "alternativ": [
+            "För att skapa ett europeiskt samarbete som skydd mot kommunismen.",
+            "För att skapa ett europeiskt samarbete om handel med USA.",
+            "För att skapa ett europeiskt samarbete och undvika krig."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "Vad var Warszawapakten?",
+          "alternativ": [
+            "En militärallians för Västeuropas länder.",
+            "En militärallians för de kommunistiska länderna.",
+            "En militärallians för de gamla delarna av Tyskland och Österrike."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Varför invaderade Sovjetunionen Ungern 1956?",
+          "alternativ": [
+            "Det ungerska kommunistpartiet hade startat krig mot Tjeckoslovakien.",
+            "Det ungerska kommunistpartiet hade förlorat valet 1955.",
+            "Det ungerska kommunistpartiet hade försökt demokratisera landet."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "När byggdes Berlinmuren?",
+          "alternativ": [
+            "1949.",
+            "1961.",
+            "1973."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "Vem styrde i Jugoslavien fram till 1980?",
+          "alternativ": [
+            "Josip Broz Tito.",
+            "Slobodan Milošević.",
+            "Ratko Mladić."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "På vilket sätt ville Gorbatjov reformera kommunismen?",
+          "alternativ": [
+            "Han ville att fler skulle få tillgång till sjukvård och utbildning.",
+            "Han ville göra Sovjetunionen öppnare och mer demokratiskt.",
+            "Han ville att Sovjetunionen skulle bli som USA."
+          ],
+          "ratt": 1
+        },
+        {
+          "fraga": "När öppnades gränsen mellan Öst- och Västtyskland?",
+          "alternativ": [
+            "1961.",
+            "1991.",
+            "1989."
+          ],
+          "ratt": 2
+        },
+        {
+          "fraga": "När upphörde Sovjetunionen att existera?",
+          "alternativ": [
+            "1991.",
+            "1989.",
+            "1961."
+          ],
+          "ratt": 0
+        },
+        {
+          "fraga": "Vilket område ockuperades av ryska militära styrkor 2014?",
+          "alternativ": [
+            "Tjetjenien.",
+            "Ukraina.",
+            "Krim."
+          ],
+          "ratt": 2
+        }
+      ]
+    },
+    {
+      "typ": "begrepp",
+      "instruktion": "Förklara kortfattat med egna ord.",
+      "rader": 3,
+      "begrepp": [
+        {
+          "term": "Ockupationszoner",
+          "poang": 2,
+          "facit": "Efter kriget delades Tyskland (och Berlin) i fyra zoner som styrdes av USA, Storbritannien, Frankrike och Sovjetunionen."
+        },
+        {
+          "term": "Marshallhjälpen",
+          "poang": 2,
+          "facit": "Amerikanskt ekonomiskt stöd för att återuppbygga Västeuropa efter kriget – och för att hindra att kommunismen spreds."
+        },
+        {
+          "term": "Pragvåren",
+          "poang": 2,
+          "facit": "Försöket 1968 att göra kommunismen i Tjeckoslovakien friare (”socialism med mänskligt ansikte”). Stoppades när Warszawapaktens trupper invaderade."
+        },
+        {
+          "term": "Tribunal",
+          "poang": 2,
+          "facit": "En internationell domstol som dömer för krigsbrott, t.ex. tribunalen för krigsbrotten i forna Jugoslavien."
+        },
+        {
+          "term": "Östtyskland",
+          "poang": 2,
+          "facit": "DDR, den kommunistiska staten som bildades 1949 ur den sovjetiska zonen. Styrdes som diktatur och gick samman med Västtyskland 1990."
+        }
+      ]
+    },
+    {
+      "typ": "fritext",
+      "fraga": "Vad präglade Sovjetunionen fram till att Gorbatjov tog över makten? Använd begreppen kontinuitet och förändring i ditt svar.",
+      "rader": 10,
+      "poang": 4,
+      "historiska_begrepp": [
+        "kontinuitet",
+        "förändring"
+      ],
+      "kriterier": [
+        "förändringsprocesser",
+        "historiska begrepp",
+        "personers betydelse"
+      ],
+      "centralt_innehall": [
+        "Långsiktiga förändringsprocesser – kontinuitet och förändring",
+        "Diktaturer och förändrade maktförhållanden"
+      ],
+      "innehall": [
+        "Enpartistat och diktatur: kommunistpartiet styrde, ingen yttrandefrihet, hemlig polis och arbetsläger (Gulag).",
+        "Planekonomi, satsning på rustning och tung industri – brist på konsumtionsvaror.",
+        "Kontrollen över Östeuropa (Ungern 1956, Pragvåren 1968).",
+        "Förändring: avstaliniseringen efter Stalins död, men systemet i grunden detsamma (kontinuitet)."
+      ],
+      "bedomning": {
+        "E": "Redogör översiktligt för några drag i det sovjetiska samhället (t.ex. enpartistyre, planekonomi, förtryck) och använder med viss säkerhet kontinuitet eller förändring.",
+        "C": "Redogör utförligt för flera drag och förklarar med exempel vad som förändrades (t.ex. avstaliniseringen) och vad som bestod. Använder båda begreppen med viss säkerhet.",
+        "A": "Redogör utförligt och nyanserat: visar att förändringar som avstaliniseringen skedde inom ett system där partiets maktmonopol bestod, och kopplar detta till varför Gorbatjov ville reformera. Använder begreppen med säkerhet."
+      }
+    },
+    {
+      "typ": "fritext",
+      "fraga": "Vad hände i Srebrenica? Fundera över hur det var möjligt. Jämför med andra historiska händelser. Använd begreppen orsak, konsekvens och förklaring i ditt svar.",
+      "rader": 24,
+      "poang": 6,
+      "historiska_begrepp": [
+        "orsak",
+        "konsekvens",
+        "förklaring"
+      ],
+      "kriterier": [
+        "orsaker och konsekvenser",
+        "jämförelse",
+        "samband dåtid–nutid",
+        "historiska begrepp"
+      ],
+      "centralt_innehall": [
+        "Folkmord, konflikter och mänskliga rättigheter",
+        "Internationellt samarbete och fredssträvanden"
+      ],
+      "innehall": [
+        "Folkmordet i Srebrenica 1995: bosnienserbiska styrkor mördade omkring 8 000 bosniakiska män och pojkar i en FN-skyddad zon.",
+        "Orsaker: Jugoslaviens upplösning, nationalism och etniska motsättningar, svaga och för få FN-styrkor.",
+        "Konsekvenser: Daytonavtalet, tribunalen i Haag, Mladić och Karadžić dömdes.",
+        "Jämförelse med t.ex. Förintelsen eller andra folkmord: avhumanisering, propaganda, omvärldens passivitet."
+      ],
+      "bedomning": {
+        "E": "Redogör översiktligt för vad som hände i Srebrenica och ger någon orsak och någon konsekvens. Gör en enkel jämförelse och drar en enkel slutsats. Använder begreppen med viss säkerhet.",
+        "C": "Redogör utförligt för förloppet och förklarar utförligt flera orsaker och konsekvenser (t.ex. nationalism, FN:s svaga mandat, tribunalen i Haag). Gör en relevant jämförelse och drar välgrundade slutsatser.",
+        "A": "Redogör utförligt och nyanserat för hur flera orsaker samverkade, väger olika förklaringar mot varandra och gör en nyanserad jämförelse med likheter och skillnader. Drar välgrundade och nyanserade slutsatser, t.ex. om vad händelsen betyder för omvärldens ansvar i dag. Använder begreppen med säkerhet."
+      }
+    }
+  ]
+}
