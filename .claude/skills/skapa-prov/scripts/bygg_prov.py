@@ -26,6 +26,77 @@ ANTAL_ALTERNATIV = 3
 RUTA, KRYSS = "☐", "☒"  # ☐ ☒
 BOKSTAVER = "ABCDEFGH"
 GRA = RGBColor(0x55, 0x55, 0x55)
+NIVAER = ("E", "C", "A")
+ANTAL_OBLIGATORISKA = 3  # standard: del 1–3 obligatoriska (högst E), resten frivilliga (upp till A)
+
+
+# ---------- Obligatoriska och frivilliga delar ----------
+
+def delinfo(prov):
+    """Lista med {'obligatorisk', 'hogsta_niva'} per del, i delarnas ordning.
+    Standard: de tre första delarna är obligatoriska och kan högst ge E, resten är
+    frivilliga och kan ge upp till A. Fälten 'obligatorisk' och 'hogsta_niva' i en
+    del i prov.json går före standarden."""
+    info = []
+    for i, d in enumerate(prov.get("delar") or []):
+        obl = d.get("obligatorisk", i < ANTAL_OBLIGATORISKA)
+        info.append({"obligatorisk": bool(obl), "hogsta_niva": d.get("hogsta_niva", "E" if obl else "A")})
+    return info
+
+
+def delintervall(nummer):
+    """[1, 2, 3] -> 'Del 1–3', [4] -> 'Del 4', [1, 3] -> 'Del 1 och 3'."""
+    if not nummer:
+        return ""
+    if len(nummer) == 1:
+        return f"Del {nummer[0]}"
+    if nummer == list(range(nummer[0], nummer[-1] + 1)):
+        return f"Del {nummer[0]}–{nummer[-1]}"
+    return "Del " + ", ".join(map(str, nummer[:-1])) + f" och {nummer[-1]}"
+
+
+def nivatext(niva):
+    return {"E": "E", "C": "E och C", "A": "E, C och A"}[niva]
+
+
+def provets_upplagg(prov):
+    """Kort text till eleven om vilka delar som är obligatoriska och vad de kan ge."""
+    info = delinfo(prov)
+    obl = [n for n, x in enumerate(info, 1) if x["obligatorisk"]]
+    friv = [n for n, x in enumerate(info, 1) if not x["obligatorisk"]]
+    meningar = []
+    if obl:
+        hogst = max((info[n - 1]["hogsta_niva"] for n in obl), key=NIVAER.index)
+        verb = "är obligatoriska" if len(obl) > 1 else "är obligatorisk"
+        meningar.append(f"{delintervall(obl)} {verb} och kan tillsammans ge betyget {hogst}." if hogst == "E"
+                        else f"{delintervall(obl)} {verb} och kan ge {nivatext(hogst)}.")
+    if friv:
+        hogst = max((info[n - 1]["hogsta_niva"] for n in friv), key=NIVAER.index)
+        verb = "är frivilliga" if len(friv) > 1 else "är frivillig"
+        meningar.append(f"{delintervall(friv)} {verb}. Där kan du visa kunskaper för C och A."
+                        if hogst == "A" else f"{delintervall(friv)} {verb} och kan ge {nivatext(hogst)}.")
+    meningar.append("Svara på så mycket du kan. Du kan lämna in även om du inte har svarat på allt.")
+    return " ".join(meningar)
+
+
+def deletikett(x, liten=False):
+    typ = "obligatorisk" if x["obligatorisk"] else "frivillig"
+    return f"{typ if liten else typ.capitalize()}, kan ge högst {x['hogsta_niva']}"
+
+
+def upplagg_for_lararen(prov):
+    """Samma upplägg som provets_upplagg, men i tredje person för uppgiftsfilen."""
+    info = delinfo(prov)
+    obl = [n for n, x in enumerate(info, 1) if x["obligatorisk"]]
+    friv = [n for n, x in enumerate(info, 1) if not x["obligatorisk"]]
+    delar = []
+    if obl:
+        hogst = max((info[n - 1]["hogsta_niva"] for n in obl), key=NIVAER.index)
+        delar.append(f"{delintervall(obl)} är obligatoriska och kan tillsammans ge högst {hogst}.")
+    if friv:
+        hogst = max((info[n - 1]["hogsta_niva"] for n in friv), key=NIVAER.index)
+        delar.append(f"{delintervall(friv)} är frivilliga och ger eleven möjlighet att visa kunskaper upp till {hogst}.")
+    return " ".join(delar)
 
 
 # ---------- Kontroll ----------
@@ -72,6 +143,22 @@ def kontrollera(prov):
                 varningar.append(f"Del {n}: fritextfråga saknar 'kriterier' (vilka betygskriterier den prövar).")
         elif typ != "flerval":
             fel.append(f"Del {n}: okänd typ {typ!r} (flerval, begrepp, fritext).")
+
+    info = delinfo(prov)
+    for n, (d, x) in enumerate(zip(delar, info), 1):
+        if x["hogsta_niva"] not in NIVAER:
+            fel.append(f"Del {n}: ogiltig 'hogsta_niva' {x['hogsta_niva']!r} (E, C eller A).")
+    if any(not a["obligatorisk"] and b["obligatorisk"] for a, b in zip(info, info[1:])):
+        varningar.append("En frivillig del kommer före en obligatorisk. De obligatoriska delarna ska komma först.")
+    if not any(x["obligatorisk"] for x in info):
+        varningar.append("Ingen del är obligatorisk.")
+    # Ett mål som prövas i provet men bara i delar som högst kan ge E går inte att nå C eller A på.
+    nar_hogre = {k for d, x in zip(delar, info) if x["hogsta_niva"] != "E" for k in d.get("kriterier", [])}
+    bara_e = sorted({k for d, x in zip(delar, info) if x["hogsta_niva"] == "E"
+                     for k in d.get("kriterier", [])} - nar_hogre)
+    if bara_e and nar_hogre:
+        varningar.append(f"Mål {', '.join(bara_e)} prövas bara i delar som högst kan ge E. "
+                         "Eleven kan inte visa C eller A på det målet. Pröva målet även i en frivillig del.")
     return fel, varningar
 
 
@@ -260,8 +347,16 @@ def bygg_elev(prov, sokvag):
     doc = nytt_dokument(prov, "ELEV")
     titel(doc, prov["titel"])
     namnrad(doc)
+    stycke(doc, provets_upplagg(prov), storlek=10.5, efter=6)
+    info = delinfo(prov)
+    forsta_frivilliga = next((n for n, x in enumerate(info, 1) if not x["obligatorisk"]), None)
     for n, d in enumerate(prov["delar"], 1):
         typ = d["typ"]
+        if n == forsta_frivilliga:
+            sidbrytning(doc)
+            rubrik(doc, "Frivilliga delar: här kan du visa kunskaper för C och A", fore=0)
+            stycke(doc, "Fortsätt om du vill och orkar. Det du har svarat på i de obligatoriska delarna gäller ändå.",
+                   storlek=10.5, efter=10, farg=GRA)
         if typ == "flerval":
             rubrik(doc, f"{n}. {d.get('instruktion', 'Välj rätt alternativ.')}", fore=4)
             for f in d["fragor"]:
@@ -274,7 +369,8 @@ def bygg_elev(prov, sokvag):
                 skrivrader(doc, d.get("rader", 3), forsta_text=b["term"])
         elif typ == "fritext":
             rader = d.get("rader", 8)
-            if rader >= 15:
+            ny_sida = rader >= 15 and n != forsta_frivilliga
+            if ny_sida:
                 sidbrytning(doc)
             p = rubrik(doc, f"{n}. {d['fraga']}", fore=0 if rader >= 15 else 22)
             stycke(doc, efter=6, hall_ihop=True)
@@ -295,6 +391,8 @@ def bygg_facit(prov, sokvag):
     stycke(doc, info, storlek=10, efter=6, farg=GRA)
     stycke(doc, "Rättningsnyckel flerval (numrering som i Trelson-filen): " + rattningsnyckel(prov),
            storlek=10, efter=6)
+    stycke(doc, "Till eleven: " + provets_upplagg(prov), storlek=10, efter=6)
+    info = delinfo(prov)
     kr = las_kriterier(prov)
     if kr:
         oversikt(doc, prov, kr)
@@ -307,21 +405,25 @@ def bygg_facit(prov, sokvag):
 
     for n, d in enumerate(prov["delar"], 1):
         typ = d["typ"]
+        x = info[n - 1]
         if typ == "flerval":
             antal = sum(f.get("poang", 1) for f in d["fragor"])
             rubrik(doc, f"{n}. {d.get('instruktion', 'Välj rätt alternativ.')}{poangtext(antal)}")
+            stycke(doc, deletikett(x), storlek=10, efter=2, farg=GRA)
             kodrader(d)
             for f in d["fragor"]:
                 flervalsfraga(doc, f, facit=True)
         elif typ == "begrepp":
             antal = sum(b.get("poang", 2) for b in d["begrepp"])
             rubrik(doc, f"{n}. {d.get('instruktion', 'Förklara kortfattat med egna ord.')}{poangtext(antal)}")
+            stycke(doc, deletikett(x), storlek=10, efter=2, farg=GRA)
             kodrader(d)
             for b in d["begrepp"]:
                 stycke(doc, b["term"] + poangtext(b.get("poang", 2)), fet=True, fore=6, hall_ihop=True)
                 stycke(doc, b.get("facit", ""), storlek=10.5)
         elif typ == "fritext":
             rubrik(doc, f"{n}. {d['fraga']}{poangtext(d.get('poang'))}")
+            stycke(doc, deletikett(x), storlek=10, efter=2, farg=GRA)
             if d.get("historiska_begrepp"):
                 stycke(doc, "Historiska begrepp: " + ", ".join(d["historiska_begrepp"]), storlek=10, efter=2, farg=GRA)
             kodrader(d)
@@ -337,7 +439,7 @@ def bygg_facit(prov, sokvag):
                 stycke(doc, "Bedömningsstöd", fet=True, fore=6, efter=2, hall_ihop=True)
                 tabell = doc.add_table(rows=0, cols=2)
                 tabell.style = "Table Grid"
-                for niva in ("E", "C", "A"):
+                for niva in NIVAER[:NIVAER.index(x["hogsta_niva"]) + 1]:
                     if niva in d["bedomning"]:
                         rad = tabell.add_row().cells
                         rad[0].width, rad[1].width = Cm(1.2), Cm(15.4)
@@ -353,41 +455,57 @@ def trelsonfragor(prov):
     """Provet som en platt lista av enskilda frågor med löpande nummer.
     Numreringen används i Trelson-filen, i rättningsnyckeln och vid rättning."""
     nr = 0
-    for d in prov["delar"]:
+    for dnr, (d, x) in enumerate(zip(prov["delar"], delinfo(prov)), 1):
+        gemensamt = {"del": dnr, **x}
         if d["typ"] == "flerval":
             for f in d["fragor"]:
                 nr += 1
                 yield {"nr": nr, "typ": "Flerval", "poang": f.get("poang", 1), "text": f["fraga"],
-                       "alternativ": f["alternativ"], "ratt": f["ratt"]}
+                       "alternativ": f["alternativ"], "ratt": f["ratt"], **gemensamt}
         elif d["typ"] == "begrepp":
             instruktion = d.get("instruktion", "Förklara kortfattat med egna ord.").rstrip(".:")
             for b in d["begrepp"]:
                 nr += 1
                 yield {"nr": nr, "typ": "Kort svar", "poang": b.get("poang", 2),
-                       "text": f"{instruktion}: {b['term']}"}
+                       "text": f"{instruktion}: {b['term']}", **gemensamt}
         else:
             nr += 1
             yield {"nr": nr, "typ": "Längre svar" if d.get("rader", 8) >= 15 else "Svar med några meningar",
-                   "poang": d.get("poang", 0), "text": d["fraga"]}
+                   "poang": d.get("poang", 0), "text": d["fraga"], **gemensamt}
 
 
 def bygg_trelson(prov, docx_sokvag, txt_sokvag):
-    rader = [prov["titel"], ""]
+    instruktion = [provets_upplagg(prov),
+                   "Skriv varje svar direkt efter raden Svar 1:, Svar 2: och så vidare. "
+                   "Ta inte bort de raderna. Vid flervalsfrågorna skriver du bokstaven för det alternativ du väljer."]
+    rader = [prov["titel"], "", *instruktion, ""]
     doc = Document()
     doc.styles["Normal"].font.name = "Calibri"
     doc.styles["Normal"].font.size = Pt(11)
     doc.add_paragraph().add_run(prov["titel"]).bold = True
-    stycke(doc, "En fråga per block. Kopiera frågetexten och alternativen var för sig in i Trelson.",
+    stycke(doc, "En fråga per block. Kopiera frågetexten och alternativen var för sig in i Trelson. "
+           "Raden Svar N: är elevens svarsrubrik och ska följa med, så att bedömningen kan dela upp svaren per fråga.",
            storlek=9.5, efter=8, farg=GRA)
+    stycke(doc, "Instruktion till eleverna (överst i provet):", fet=True, storlek=10, efter=2)
+    for t in instruktion:
+        stycke(doc, t, efter=4)
+    del_nu = None
     for f in trelsonfragor(prov):
+        if f["del"] != del_nu:
+            del_nu = f["del"]
+            delrubrik = f"Del {del_nu} – {'obligatorisk' if f['obligatorisk'] else 'frivillig'}"
+            rader += [delrubrik, ""]
+            stycke(doc, delrubrik, fet=True, storlek=12, fore=16, efter=2, hall_ihop=True)
         huvud = f"Fråga {f['nr']} – {f['typ']} ({f['poang']} p)"
+        svar = f"Svar {f['nr']}:"
         rader += [huvud, f["text"]]
         stycke(doc, huvud, fet=True, storlek=10, fore=10, farg=GRA, hall_ihop=True)
-        stycke(doc, f["text"], hall_ihop="alternativ" in f)
+        stycke(doc, f["text"], hall_ihop=True)
         for j, alt in enumerate(f.get("alternativ", [])):
             rader.append(f"{BOKSTAVER[j]}. {alt}")
-            stycke(doc, f"{BOKSTAVER[j]}. {alt}", hall_ihop=j < len(f["alternativ"]) - 1)
-        rader.append("")
+            stycke(doc, f"{BOKSTAVER[j]}. {alt}", hall_ihop=True)
+        rader += [svar, ""]
+        stycke(doc, svar, fet=True, fore=4)
     doc.save(docx_sokvag)
     txt_sokvag.write_text("\n".join(rader), encoding="utf-8")
 
@@ -410,33 +528,56 @@ def bygg_uppgiftsfil(prov, sokvag):
                 alla.append(k)
     if kr.get("kriterier"):
         alla.sort(key=list(kr["kriterier"]).index)
+    alla_fragor = list(trelsonfragor(prov))
+    info = delinfo(prov)
     rader = [f"Uppgift: {prov['titel']}",
              f"Läroplan: {laroplan}",
              f"Mål som testas: {', '.join(alla)}",
              f"Underlag: {prov.get('kalla', 'inget')}",
              ""]
-    nummer = {id(x): f["nr"] for x, f in zip(_kallor(prov), trelsonfragor(prov))}
-    flerval = [f for f in trelsonfragor(prov) if "alternativ" in f]
-    for d in prov["delar"]:
+    rader.append("Provets delar:")
+    for dnr, x in enumerate(info, 1):
+        nr = [f["nr"] for f in alla_fragor if f["del"] == dnr]
+        fragor = f"fråga {nr[0]}" if len(nr) == 1 else f"fråga {nr[0]}–{nr[-1]}"
+        rader.append(f"  Del {dnr} ({fragor}): {deletikett(x, liten=True)}")
+    rader.append("")
+    nummer = {id(x): f["nr"] for x, f in zip(_kallor(prov), alla_fragor)}
+    flerval = [f for f in alla_fragor if "alternativ" in f]
+    for dnr, (d, x) in enumerate(zip(prov["delar"], info), 1):
         mal = ", ".join(d.get("kriterier", []))
+        delrad = f"  Del: {dnr} ({deletikett(x, liten=True)})"
+        tak = NIVAER.index(x["hogsta_niva"])
         if d["typ"] == "begrepp":
             for b in d["begrepp"]:
                 rader += [f"Fråga {nummer[id(b)]}: {d.get('instruktion', 'Förklara kortfattat med egna ord.').rstrip('.:')}: {b['term']}",
+                          delrad,
                           f"  Mål: {mal}",
-                          f"  E: {b.get('facit', '')}",
-                          "  C: – (begreppsfrågan prövar E-nivå)",
-                          "  A: – (begreppsfrågan prövar E-nivå)",
-                          ""]
+                          f"  E: {b.get('facit', '')}"]
+                rader += [f"  {niva}: – (begreppsfrågan prövar E-nivå)" for niva in ("C", "A")]
+                rader.append("")
         elif d["typ"] == "fritext":
             bed = d.get("bedomning", {})
-            rader += [f"Fråga {nummer[id(d)]}: {d['fraga']}", f"  Mål: {mal}"]
-            rader += [f"  {niva}: {bed.get(niva, '')}" for niva in ("E", "C", "A")]
+            rader += [f"Fråga {nummer[id(d)]}: {d['fraga']}", delrad, f"  Mål: {mal}"]
+            rader += [f"  {niva}: {bed.get(niva, '')}" if NIVAER.index(niva) <= tak
+                      else f"  {niva}: – (delen kan högst ge {x['hogsta_niva']})" for niva in NIVAER]
             if d.get("vanliga_missforstand"):
                 rader.append(f"  Vanliga missförstånd: {d['vanliga_missforstand']}")
             rader.append("")
+    kommentar = []
     if flerval:
-        rader.append(f"Lärarens kommentarer: Fråga {flerval[0]['nr']}–{flerval[-1]['nr']} är flervalsfrågor "
-                     f"(mål {', '.join(prov['delar'][0].get('kriterier', []))}) och rättas med nyckeln: {rattningsnyckel(prov)}.")
+        kommentar.append(f"Fråga {flerval[0]['nr']}–{flerval[-1]['nr']} är flervalsfrågor "
+                         f"(mål {', '.join(prov['delar'][0].get('kriterier', []))}) och rättas med nyckeln: {rattningsnyckel(prov)}. "
+                         "Eleven svarar med en bokstav efter raden Svar N: (eller ett kryss vid ett alternativ). "
+                         "Tolka svaret generöst, men flagga om eleven har valt mer än ett alternativ.")
+    obl = [f["nr"] for f in alla_fragor if f["obligatorisk"]]
+    if obl:
+        kommentar.append(f"{upplagg_for_lararen(prov)} "
+                         "Bedöm aldrig en fråga över delens högsta nivå. "
+                         f"Flagga i lärarunderlaget varje elev som saknar svar eller har ofullständiga svar i de obligatoriska "
+                         f"delarna (fråga {obl[0]}–{obl[-1]}), med frågenumren. Ett tomt svar i en frivillig del är inget fel "
+                         "och ska inte flaggas.")
+    if kommentar:
+        rader.append("Lärarens kommentarer: " + " ".join(kommentar))
     sokvag.write_text("\n".join(rader) + "\n", encoding="utf-8")
 
 

@@ -39,14 +39,20 @@ Skillen gör ett prov i tre steg: **läs kapitlet → skriv provet som `prov.jso
 
 Om läraren inte säger något annat:
 
-| Del | Typ (`typ` i JSON) | Omfattning | Svarsutrymme |
-|---|---|---|---|
-| 1 | `flerval` – "Välj rätt alternativ." | **12–15 frågor**, 3 alternativ, ett rätt | kryssrutor |
-| 2 | `begrepp` – "Förklara kortfattat med egna ord." | 4–5 begrepp | 3 rader/begrepp |
-| 3 | `fritext` – kortare resonemang | 1 fråga | ca 8 rader |
-| 4 | `fritext` – längre resonemang med historiska begrepp | 1–2 frågor | ca 22–24 rader (en sida) |
+| Del | Typ (`typ` i JSON) | Omfattning | Svarsutrymme | Obligatorisk? | Kan ge |
+|---|---|---|---|---|---|
+| 1 | `flerval` – "Välj rätt alternativ." | **12–15 frågor**, 3 alternativ, ett rätt | kryssrutor | ja | högst E |
+| 2 | `begrepp` – "Förklara kortfattat med egna ord." | 4–5 begrepp | 3 rader/begrepp | ja | högst E |
+| 3 | `fritext` – kortare resonemang | 1 fråga | ca 8 rader | ja | högst E |
+| 4 | `fritext` – längre resonemang med historiska begrepp | 1–2 frågor | ca 22–24 rader (en sida) | nej, frivillig | E–A |
 
 Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje** (klassen har inte arbetat med det ännu) – lägg bara till en om läraren ber om det.
+
+**Obligatoriska och frivilliga delar.** Del 1–3 är obligatoriska och ska *tillsammans* räcka för E. Del 4 är frivillig och ger möjlighet till C och A. Tanken är att elever som inte känner sig starka börjar med korta svar och kan sluta med ett godkänt resultat. Därför gäller:
+- Flerval och begrepp räcker inte ensamma för E, eftersom E-kriterierna kräver att eleven *förklarar* samband och *för enkla resonemang*. Del 3 ska ge eleven möjlighet att visa det på E-nivå.
+- **Varje mål som prövas i del 1–3 ska också prövas i del 4.** Annars kan eleven inte visa C eller A på det målet. Scriptet varnar om det saknas.
+- Eleven får lämna in även om något saknas. Inga frågor görs obligatoriska i Trelson; bedömningsskillen flaggar saknade svar i stället.
+- Scriptet skriver upplägget överst i elevprovet, i facit, i Trelson-filen och i uppgiftsfilen. De frivilliga delarna börjar på en ny sida i elevprovet med en egen rubrik.
 
 ### 3. Regler för frågorna
 
@@ -63,7 +69,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 - Skriv i `facit` ett kort modellsvar (1–3 meningar) med det som krävs för full poäng.
 
 **Fritextfrågor (resonemang)**
-- Del 3: en fråga som kräver en förklaring eller ett perspektiv, t.ex. *"…Vilket perspektiv, och varför tror du att det är så?"*
+- Del 3: en fråga som kräver en förklaring eller ett perspektiv, t.ex. *"…Vilket perspektiv, och varför tror du att det är så?"* Den är obligatorisk och kan högst ge E, så skriv bara E-nivån i `bedomning` (eller alla tre – C och A visas då inte i facit och uppgiftsfil). Frågan ska vara möjlig att klara för en elev på E-nivå.
 - Del 4: en öppen fråga som kräver resonemang och där eleven ska använda historiska begrepp: **orsak och konsekvens, kontinuitet och förändring, villkor och värderingar** (och vid behov *förklaring*, *jämförelse*). Skriv ut i frågan vilka begrepp som ska användas, som i exempelproven.
 - Fritextfrågorna ska ge eleven möjlighet att visa kunskaper enligt **betygskriterierna i kursplanen för rätt utgåva** (läs filen). Låt frågorna tillsammans täcka flera av kriteriernas områden, i mån av vad kapitlet ger stöd för. Använd områdena och progressionsorden i kursplanfilen för rätt utgåva – de skiljer sig mellan Gy-11 och Gy-25 (Gy-25: godtagbara → goda → mycket goda kunskaper, enkla → utvecklade → utvecklade och nyanserade resonemang). Ungefärliga områden:
   - förändringsprocesser, händelser och personer – förlopp, orsaker och konsekvenser
@@ -73,6 +79,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
   - historiska begrepp
   - källmaterial (om kapitlet innehåller källor, bilder eller citat)
   - historiebruk (hur historien har använts)
+- Del 4 är frivillig. Frågorna där ska tillsammans pröva **alla mål som prövas i del 1–3**, så att C och A går att nå på varje mål.
 - Minst en fråga i del 4 ska kunna nå A-nivå: den ska öppna för jämförelser, flera samband, olika tolkningar eller en koppling till nutiden.
 - Ange för varje fritextfråga:
   - `historiska_begrepp` – listan som står i frågan
@@ -110,6 +117,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 }
 ```
 - `ratt` är index (0, 1 eller 2) för rätt alternativ.
+- `obligatorisk` (true/false) och `hogsta_niva` (`"E"`, `"C"` eller `"A"`) per del är frivilliga fält. Utan dem gäller standarden: de tre första delarna är obligatoriska med högst E, resten frivilliga med upp till A. Ange fälten bara om läraren vill ha ett annat upplägg. Obligatoriska delar ska komma före frivilliga.
 - Delarna numreras automatiskt (1., 2., …) i den ordning de står.
 - `kalla` hamnar bara i facit, inte på elevens prov.
 
@@ -119,11 +127,11 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 pip install python-docx   # om det saknas
 python3 .claude/skills/skapa-prov/scripts/bygg_prov.py prov/<namn>/prov.json --pdf
 ```
-Scriptet kontrollerar JSON-filen (antal flervalsfrågor, 3 alternativ, giltigt `ratt`, fördelning av rätta svar) och skriver i samma mapp:
+Scriptet kontrollerar JSON-filen (antal flervalsfrågor, 3 alternativ, giltigt `ratt`, fördelning av rätta svar, att obligatoriska delar kommer först och att varje mål går att nå C/A på) och skriver i samma mapp:
 - `<namn>_elev.docx` – pappersprovet
-- `<namn>_facit.docx` – facit, bedömningsstöd, rättningsnyckel för flervalsfrågorna och en översikt över vilka mål och vilket centralt innehåll (CI) varje del prövar
-- `<namn>_uppgift.txt` – uppgiftsfil i formatet som skillen `historia-bedomning` läser (Uppgift / Läroplan / Mål som testas / Underlag / Fråga N med Mål, E, C, A, Vanliga missförstånd). Läraren kan lägga den i Drive-mappen *Historia 1b – uppgifter*. Frågenumren är desamma som i Trelson-filen.
-- `<namn>_trelson.docx` och `.txt` – provet som en lista av enskilda frågor med löpande nummer (Fråga 1, 2, …), utan kryssrutor och skrivrader, för att kopiera in i Trelson. Flervalsalternativen har bokstäverna A–C. Begreppen blir en fråga var.
+- `<namn>_facit.docx` – facit, bedömningsstöd, rättningsnyckel för flervalsfrågorna och en översikt över vilka mål och vilket centralt innehåll (CI) varje del prövar. Varje del är märkt med obligatorisk/frivillig och högsta nivå, och bedömningsstödet visar bara nivåerna delen kan ge.
+- `<namn>_uppgift.txt` – uppgiftsfil i formatet som skillen `historia-bedomning` läser (Uppgift / Läroplan / Mål som testas / Underlag / Fråga N med Mål, E, C, A, Vanliga missförstånd). Läraren kan lägga den i Drive-mappen *Historia 1b – uppgifter*. Frågenumren är desamma som i Trelson-filen. Filen listar provets delar med högsta nivå, märker varje fråga med sin del och säger åt `historia-bedomning` att inte bedöma över delens nivå och att flagga saknade svar i de obligatoriska delarna.
+- `<namn>_trelson.docx` och `.txt` – provet som en lista av enskilda frågor med löpande nummer (Fråga 1, 2, …), utan kryssrutor och skrivrader, för att kopiera in i Trelson. Flervalsalternativen har bokstäverna A–C. Begreppen blir en fråga var. Överst står en instruktion till eleverna, frågorna är grupperade per del, och efter varje fråga står en fast svarsrubrik (`Svar 1:`, `Svar 2:` …) som eleven skriver sitt svar efter. Rubrikerna gör att bedömningen kan dela upp svaren per fråga. Vilket flervalsformat som fungerar bäst i Trelson testas fortfarande (se `SAMMANFATTNING.md`).
 - PDF med `--pdf` (kräver LibreOffice).
 
 Den löpande numreringen är densamma i Trelson-filen, i rättningsnyckeln och vid rättning av elevsvar. Åtgärda alla fel och varningar och bygg om.

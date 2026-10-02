@@ -20,6 +20,17 @@ Senast uppdaterad 2026-10-02. Kan klistras in i en annan tråd eller läggas som
 
 Svaren blir alltså längre och längre genom provet. Ingen tidslinje än.
 
+**Betygsnivåer per del**
+- **Del 1–3 är obligatoriska** och kan tillsammans ge **E**. Del 3 (kortare skrivfråga) skrivs på E-nivå, så att eleven får visa förklaringar och enkla resonemang. Det klarar inte flerval och begreppsförklaringar ensamma.
+- **Del 4 är frivillig** och ger möjlighet till **C och A**.
+- Varje mål som prövas i del 1–3 ska också prövas i del 4. Annars kan eleven inte visa C eller A på det målet.
+- Eleven börjar med de korta delarna. Det är tänkt som ett stöd för elever som inte känner sig starka.
+- Provet anger tydligt vad varje del kan ge. Facit och uppgiftsfilen anger samma sak, så att `historia-bedomning` inte letar efter C-kvaliteter i del 1–3.
+
+**Ofullständiga svar**
+- Eleven behöver inte ha svarat på allt för att gå vidare eller skicka in. Inga frågor görs obligatoriska i Trelson eller Formulär.
+- `historia-bedomning` **flaggar** i lärarunderlaget när svar saknas eller är ofullständiga i de obligatoriska delarna. Tomma svar i frivilliga delar flaggas inte.
+
 **Innehåll**
 - Allt ska gå att besvara med kapitlet.
 - Flervals- och begreppsfrågor bygger bara på brödtexten. Fördjupningsrutorna (Källor, Historiebruk, Debatt, porträtt och temarutor) är inte säkert lästa.
@@ -37,27 +48,42 @@ Det centrala innehållet är numrerat CI1, CI2 osv.
 
 **Språknivå:** som i läroboken. Facit använder kriteriernas ord.
 
+**Bedömning:** all bedömning, även av flervalsfrågorna, görs av `historia-bedomning`. Trelsons egen rättning behövs inte.
+
+## Provet i Trelson (under test)
+
+Trelson tar emot textfiler (skrivytan) och importerade Google Formulär. Tre format testas med några elever:
+
+- **Kryss i hakparenteser** i skrivytan: `[ ] A. …` och eleven skriver `[X]`. Närmast pappersprovet.
+- **Samlad svarsblankett** i skrivytan: alla flervalsfrågor först, sedan en tabell med Fråga och Svar.
+- **Två moduler:** del 1–2 i Google Formulär (klick och korta svar), del 3–4 i skrivytan (långa svar). Läraren tror på det här alternativet.
+
+Oavsett format får varje svar en fast rubrik (`Svar 1:`, `Svar 16:` …), så att skillen kan dela upp svaren per fråga. Instruktionen säger att rubrikerna inte får tas bort. Blanda inte frågor eller alternativ, så att numren stämmer med facit.
+
 ## Filer som skapas för varje prov
 
 | Fil | Till vad |
 |---|---|
-| `…_elev.docx` | Pappersprovet. |
-| `…_facit.docx` | Rätta svar, rättningsnyckel och modellsvar. För skrivfrågorna också vad ett bra svar tar upp och bedömningsstöd E/C/A. Överst en översikt över vilka mål och vilket centralt innehåll varje del prövar. |
-| `…_trelson.docx` / `.txt` | En fråga per block med löpande nummer (1–23), utan kryssrutor, för att kopiera in i Trelson. |
-| `…_uppgift.txt` | Uppgiftsfil för bedömningsskillen `historia-bedomning`. Läggs i Drive-mappen *Historia 1b – uppgifter*. |
-| `prov.json` | Hela provet i strukturerad form. Allt annat byggs från den. |
+| `…_elev.docx` | Pappersprovet. Överst står vilka delar som är obligatoriska och vad de kan ge. De frivilliga delarna börjar på en ny sida. |
+| `…_facit.docx` | Rätta svar, rättningsnyckel och modellsvar. För skrivfrågorna också vad ett bra svar tar upp och bedömningsstöd, bara för de nivåer delen kan ge. Överst en översikt över vilka mål och vilket centralt innehåll varje del prövar. Varje del är märkt med obligatorisk/frivillig och högsta nivå. |
+| `…_trelson.docx` / `.txt` | En fråga per block med löpande nummer (1–23), grupperade per del, med en fast svarsrubrik (`Svar 1:` …) efter varje fråga och en instruktion till eleverna överst. Flervalsformatet kan ändras när testet är klart. |
+| `…_uppgift.txt` | Uppgiftsfil för bedömningsskillen `historia-bedomning`. Listar delarna med högsta nivå, märker varje fråga med sin del och säger åt skillen att flagga saknade svar i de obligatoriska delarna. Läggs i Drive-mappen *Historia 1b – uppgifter*. |
+| `prov.json` | Hela provet i strukturerad form. Allt annat byggs från den. Fälten `obligatorisk` och `hogsta_niva` per del är frivilliga; standard är del 1–3 obligatoriska (högst E) och resten frivilliga (upp till A). |
 
 Frågenumren är desamma i Trelson-filen, facit och uppgiftsfilen.
 
 ## Arbetsdelning mellan skillarna
 
-- **`skapa-prov`** (Claude Code, i repot) gör proven och uppgiftsfilerna.
-- **`historia-bedomning`** (claude.ai) bedömer elevsvar mot uppgiftsfilen och ger lärarunderlag och elevåterkoppling.
+- **`skapa-prov`** (Claude Code, i repot) gör proven och uppgiftsfilerna. Byggscriptet varnar om ett mål bara prövas i delar som högst kan ge E.
+- **`historia-bedomning`** (claude.ai) bedömer elevsvar mot uppgiftsfilen och ger lärarunderlag och elevåterkoppling. Den flaggar saknade svar.
 
 ## Öppna frågor
 
-- **Trelson:** hur tar den emot frågor (uppladdning eller kopiering), och kan den rätta flervalsfrågor själv? Läraren kollar.
+- **Trelson-format:** vilket av de tre formaten fungerar bäst för eleverna? Testas med några elever.
 - **Trelson-export:** vilket format får elevsvaren (en fil per elev eller en samlad fil)? Det styr hur rättningen läser in svaren.
+- **Ordning mellan moduler:** kan Trelson låsa så att del 1–2 görs först? Annars räcker en tydlig instruktion.
+- **Provet på *Det långa 1800-talet*** är inte ombyggt med det nya upplägget. Historiebruket (Gy25 mål 4, Gy11 4a/4b) prövas bara i del 3, som nu högst kan ge E. Antingen flyttas historiebruket till en frivillig del, eller så får del 3 i just det här provet ge upp till A.
+- **Att göra:** `historia-bedomning` ska flagga saknade svar och respektera högsta nivå per del. (`skapa-prov` är klar.)
 - **Uppgiftsfilerna** ligger inte i Drive än.
 - **Ej prövat i det här provet:** källkritik (Gy25 mål 3, Gy11 3a/3b) och Gy11 1e. Läraren vill inte lägga till det nu.
 - **PDF:** kan inte göras i molnmiljön. Spara som PDF från Word.
