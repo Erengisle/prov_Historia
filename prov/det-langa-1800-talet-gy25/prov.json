@@ -194,6 +194,37 @@
     },
     {
       "typ": "fritext",
+      "fraga": "Under 1800-talet växte nya ideologier fram. Välj liberalismen, konservatismen eller socialismen. Förklara varför ideologin växte fram och vad den ville förändra eller bevara. Ge också ett exempel på hur ideologin syns i samhället i dag. Använd begreppen orsak och konsekvens.",
+      "rader": 8,
+      "poang": 4,
+      "historiska_begrepp": [
+        "orsak",
+        "konsekvens"
+      ],
+      "kriterier": [
+        "1a",
+        "1b",
+        "2"
+      ],
+      "centralt_innehall": [
+        "CI2",
+        "CI5",
+        "CI6"
+      ],
+      "innehall": [
+        "Ideologierna växte fram ur upplysningen och den franska revolutionen. En ideologi uppkommer som svar på ett behov eller problem i sin tid.",
+        "Liberalismen: medelklassen (handelsmän och industriägare) saknade politiskt inflytande i privilegiesamhället. Den ville ha individens frihet, likhet inför lagen, yttrande-, mötes- och religionsfrihet, ekonomisk frihet och fri konkurrens, äganderätt och en begränsad kungamakt.",
+        "Konservatismen: en reaktion mot den franska revolutionen och snabba förändringar. Aristokrater, storbönder och ämbetsmän ville bevara traditionerna, religionen och samhällsordningen. Förändringar skulle ske långsamt, och staten skulle vara stark och skydda nationen.",
+        "Socialismen: arbetarklassens dåliga villkor under industrialiseringen (långa arbetsdagar, låga löner, risk att förlora arbetet). Den ville avskaffa den privata äganderätten så att allt ägs gemensamt. Marx och Engels: klasskamp mellan arbetare och kapitalister.",
+        "Konsekvens och samband med i dag: ideologierna blev grunden för de politiska partier som bildades i slutet av 1800-talet, och socialismen delades i kommunistiska och socialdemokratiska partier. Exempel i dag: partier som bygger på ideologierna, yttrandefrihet och religionsfrihet, fri marknad, fackföreningar eller debatten om hur snabbt samhället ska förändras."
+      ],
+      "bedomning": {
+        "E": "Visar godtagbara kunskaper om varför den valda ideologin växte fram, t.ex. medelklassens brist på inflytande, reaktionen mot revolutionen eller arbetarnas villkor, och om vad den ville förändra eller bevara. För enkla resonemang med orsak och konsekvens, och ger exempel på och förklarar översiktligt ett samband med i dag, t.ex. att ideologin blev grund för politiska partier."
+      },
+      "vanliga_missforstand": "Räknar upp ideologins idéer utan att förklara varför den växte fram. Ger ett exempel från i dag utan att visa hur det hänger ihop med 1800-talet. Blandar ihop ideologierna, t.ex. tror att 1800-talets liberaler ville ge alla rösträtt."
+    },
+    {
+      "typ": "fritext",
       "fraga": "I Paris finns gator och platser som är uppkallade efter Napoleon och hans segrar, till exempel Rue Austerlitz och Avenue de Wagram. Varför tror du att man har valt att minnas Napoleon på det sättet? Ge också ett exempel på hur historia används på ett liknande sätt i dag.",
       "rader": 8,
       "poang": 4,

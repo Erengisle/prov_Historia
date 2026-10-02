@@ -9,6 +9,8 @@ Senast uppdaterad 2026-10-02. Kan klistras in i en annan tråd eller läggas som
   - `prov/det-langa-1800-talet-gy25/` – Gy-25-boken, s. 84–113
   - `prov/det-langa-1800-talet-gy11/` – Gy-11-boken, s. 74–99
   - Samma frågor i båda. Bedömningsstödet följer respektive läroplan.
+  - 24 frågor i sex delar. Del 1–3 obligatoriska (flerval, begrepp, ideologifrågan), del 4–6 frivilliga (gatunamnen i Paris, franska revolutionen, Tysklands enande).
+  - Historiebruket (Gy25 mål 4, Gy11 4a/4b) och Gy11 1c prövas bara i de frivilliga delarna. Elever som slutar efter del 3 behöver pröva dem på E-nivå vid ett annat tillfälle.
 
 ## Beslut
 
@@ -24,6 +26,7 @@ Svaren blir alltså längre och längre genom provet. Ingen tidslinje än.
 - **Del 1–3 är obligatoriska** och kan tillsammans ge **E**. Del 3 (kortare skrivfråga) skrivs på E-nivå, så att eleven får visa förklaringar och enkla resonemang. Det klarar inte flerval och begreppsförklaringar ensamma.
 - **Del 4 är frivillig** och ger möjlighet till **C och A**.
 - Varje mål som prövas i del 1–3 ska också prövas i del 4. Annars kan eleven inte visa C eller A på det målet.
+- Ett mål som bara prövas i del 4 bedöms inte hos elever som slutar efter del 3. Det är tillåtet, men byggscriptet säger till.
 - Eleven börjar med de korta delarna. Det är tänkt som ett stöd för elever som inte känner sig starka.
 - Provet anger tydligt vad varje del kan ge. Facit och uppgiftsfilen anger samma sak, så att `historia-bedomning` inte letar efter C-kvaliteter i del 1–3.
 
@@ -66,7 +69,7 @@ Oavsett format får varje svar en fast rubrik (`Svar 1:`, `Svar 16:` …), så a
 |---|---|
 | `…_elev.docx` | Pappersprovet. Överst står vilka delar som är obligatoriska och vad de kan ge. De frivilliga delarna börjar på en ny sida. |
 | `…_facit.docx` | Rätta svar, rättningsnyckel och modellsvar. För skrivfrågorna också vad ett bra svar tar upp och bedömningsstöd, bara för de nivåer delen kan ge. Överst en översikt över vilka mål och vilket centralt innehåll varje del prövar. Varje del är märkt med obligatorisk/frivillig och högsta nivå. |
-| `…_trelson.docx` / `.txt` | En fråga per block med löpande nummer (1–23), grupperade per del, med en fast svarsrubrik (`Svar 1:` …) efter varje fråga och en instruktion till eleverna överst. Flervalsformatet kan ändras när testet är klart. |
+| `…_trelson.docx` / `.txt` | En fråga per block med löpande nummer (1–24 i provet om 1800-talet), grupperade per del, med en fast svarsrubrik (`Svar 1:` …) efter varje fråga och en instruktion till eleverna överst. Flervalsformatet kan ändras när testet är klart. |
 | `…_uppgift.txt` | Uppgiftsfil för bedömningsskillen `historia-bedomning`. Listar delarna med högsta nivå, märker varje fråga med sin del och säger åt skillen att flagga saknade svar i de obligatoriska delarna. Läggs i Drive-mappen *Historia 1b – uppgifter*. |
 | `prov.json` | Hela provet i strukturerad form. Allt annat byggs från den. Fälten `obligatorisk` och `hogsta_niva` per del är frivilliga; standard är del 1–3 obligatoriska (högst E) och resten frivilliga (upp till A). |
 
@@ -82,8 +85,7 @@ Frågenumren är desamma i Trelson-filen, facit och uppgiftsfilen.
 - **Trelson-format:** vilket av de tre formaten fungerar bäst för eleverna? Testas med några elever.
 - **Trelson-export:** vilket format får elevsvaren (en fil per elev eller en samlad fil)? Det styr hur rättningen läser in svaren.
 - **Ordning mellan moduler:** kan Trelson låsa så att del 1–2 görs först? Annars räcker en tydlig instruktion.
-- **Provet på *Det långa 1800-talet*** är inte ombyggt med det nya upplägget. Historiebruket (Gy25 mål 4, Gy11 4a/4b) prövas bara i del 3, som nu högst kan ge E. Antingen flyttas historiebruket till en frivillig del, eller så får del 3 i just det här provet ge upp till A.
 - **Att göra:** `historia-bedomning` ska flagga saknade svar och respektera högsta nivå per del. (`skapa-prov` är klar.)
 - **Uppgiftsfilerna** ligger inte i Drive än.
 - **Ej prövat i det här provet:** källkritik (Gy25 mål 3, Gy11 3a/3b) och Gy11 1e. Läraren vill inte lägga till det nu.
-- **PDF:** kan inte göras i molnmiljön. Spara som PDF från Word.
+- **PDF:** byggscriptet gör nu PDF med `--pdf` när LibreOffice finns. Annars sparar läraren som PDF från Word.

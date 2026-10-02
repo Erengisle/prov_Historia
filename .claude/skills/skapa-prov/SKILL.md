@@ -51,6 +51,7 @@ Svaren ska alltså bli **längre och längre** genom provet. **Ingen tidslinje**
 **Obligatoriska och frivilliga delar.** Del 1–3 är obligatoriska och ska *tillsammans* räcka för E. Del 4 är frivillig och ger möjlighet till C och A. Tanken är att elever som inte känner sig starka börjar med korta svar och kan sluta med ett godkänt resultat. Därför gäller:
 - Flerval och begrepp räcker inte ensamma för E, eftersom E-kriterierna kräver att eleven *förklarar* samband och *för enkla resonemang*. Del 3 ska ge eleven möjlighet att visa det på E-nivå.
 - **Varje mål som prövas i del 1–3 ska också prövas i del 4.** Annars kan eleven inte visa C eller A på det målet. Scriptet varnar om det saknas.
+- Ett mål som **bara** prövas i del 4 bedöms inte hos elever som slutar efter del 3. Det är tillåtet (t.ex. när frågan är svår), men scriptet säger till, och det ska stå i överlämningen så att läraren kan pröva målet på E-nivå vid ett annat tillfälle.
 - Eleven får lämna in även om något saknas. Inga frågor görs obligatoriska i Trelson; bedömningsskillen flaggar saknade svar i stället.
 - Scriptet skriver upplägget överst i elevprovet, i facit, i Trelson-filen och i uppgiftsfilen. De frivilliga delarna börjar på en ny sida i elevprovet med en egen rubrik.
 

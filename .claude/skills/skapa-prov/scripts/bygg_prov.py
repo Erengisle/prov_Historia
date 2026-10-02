@@ -159,6 +159,14 @@ def kontrollera(prov):
     if bara_e and nar_hogre:
         varningar.append(f"Mål {', '.join(bara_e)} prövas bara i delar som högst kan ge E. "
                          "Eleven kan inte visa C eller A på det målet. Pröva målet även i en frivillig del.")
+    # Ett mål som bara prövas i frivilliga delar bedöms inte hos elever som slutar efter de obligatoriska.
+    i_obl = {k for d, x in zip(delar, info) if x["obligatorisk"] for k in d.get("kriterier", [])}
+    bara_friv = sorted({k for d, x in zip(delar, info) if not x["obligatorisk"]
+                        for k in d.get("kriterier", [])} - i_obl)
+    if bara_friv and i_obl:
+        varningar.append(f"OBS: Mål {', '.join(bara_friv)} prövas bara i frivilliga delar. Elever som slutar efter "
+                         "de obligatoriska delarna bedöms inte på det målet i det här provet – pröva det på E-nivå "
+                         "vid ett annat tillfälle.")
     return fel, varningar
 
 
@@ -246,13 +254,16 @@ def stycke(doc, text="", fet=False, storlek=11, fore=0, efter=0, farg=None, hall
 
 
 def understruken(p, farg="808080"):
-    """Lägger en linje under stycket (används som skrivrad)."""
+    """Lägger en linje under stycket (används som skrivrad).
+    Word och LibreOffice slår ihop stycken i rad som har samma kantlinjer, och ritar då bara
+    den nedersta linjen. Därför sätts också en mellanlinje (w:between), så att varje rad syns."""
     ppr = p._p.get_or_add_pPr()
     kant = OxmlElement("w:pBdr")
-    under = OxmlElement("w:bottom")
-    for k, v in (("w:val", "single"), ("w:sz", "4"), ("w:space", "1"), ("w:color", farg)):
-        under.set(qn(k), v)
-    kant.append(under)
+    for sida in ("w:bottom", "w:between"):
+        linje = OxmlElement(sida)
+        for k, v in (("w:val", "single"), ("w:sz", "4"), ("w:space", "1"), ("w:color", farg)):
+            linje.set(qn(k), v)
+        kant.append(linje)
     ppr.append(kant)
 
 
