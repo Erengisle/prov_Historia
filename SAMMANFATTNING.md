@@ -76,6 +76,12 @@ Oavsett format får varje svar en fast rubrik (`Svar 1:`, `Svar 16:` …), så a
 
 Frågenumren är desamma i Trelson-filen, facit och uppgiftsfilen.
 
+## I Drive
+
+Under *Historia → Hi1b*:
+- **Historia 1b – uppgifter**: uppgiftsfilerna som Google-dokument, en per läroplan (*Det långa 1800-talet (Gy25)* och *(Gy11)*). Det är den mapp `historia-bedomning` letar i.
+- **Prov – Det långa 1800-talet**: Trelson-frågorna som Google-dokument (samma för båda läroplanerna), plus elevprov och facit som Word och PDF.
+
 ## Arbetsdelning mellan skillarna
 
 - **`skapa-prov`** (Claude Code, i repot) gör proven och uppgiftsfilerna. Byggscriptet varnar om ett mål bara prövas i delar som högst kan ge E.
@@ -87,6 +93,5 @@ Frågenumren är desamma i Trelson-filen, facit och uppgiftsfilen.
 - **Trelson-export:** vilket format får elevsvaren (en fil per elev eller en samlad fil)? Det styr hur rättningen läser in svaren.
 - **Ordning mellan moduler:** kan Trelson låsa så att del 1–2 görs först? Annars räcker en tydlig instruktion.
 - **Att göra:** `historia-bedomning` ska flagga saknade svar och respektera högsta nivå per del. (`skapa-prov` är klar.)
-- **Uppgiftsfilerna** ligger inte i Drive än.
 - **Ej prövat i det här provet:** källkritik (Gy25 mål 3, Gy11 3a/3b) och Gy11 1e. Läraren vill inte lägga till det nu.
 - **PDF:** byggscriptet gör nu PDF med `--pdf` när LibreOffice finns. Annars sparar läraren som PDF från Word.
